@@ -1,0 +1,21 @@
+{
+  "crawler_id": "crawler_1774039289270",
+  "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+  "status": "stopped",
+  "max_depth": 2,
+  "max_pages": 20,
+  "hit_rate": 1.0,
+  "queue_limit": 1000,
+  "pages_crawled": 20,
+  "failed_pages": 0,
+  "queue_size": 1000,
+  "visited_count": 5374,
+  "indexed_documents": 63,
+  "unique_terms": 17925,
+  "total_postings": 55210,
+  "bucket_files": 27,
+  "created_at": 1774039289.2707155,
+  "updated_at": 1774093120.4897187,
+  "status_version": 1,
+  "updated_at_iso": "2026-03-21T11:38:40.643737"
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Page</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Search Indexed Pages</h1>
+      <p>Search through indexed crawler results, inspect frequency values, or try lucky mode.</p>
+    </div>
+
+    <div class="button-row" style="margin-top: 20px; margin-bottom: 20px;">
+      <a href="/" style="text-decoration: none;">
+        <button type="button" class="btn-secondary">← Back to Dashboard</button>
+      </a>
+    </div>
+
+    <div class="grid top-grid">
+      <div class="card">
+        <div class="row">
+          <div>
+            <h2>Search</h2>
+            <div class="subtext">Run a query over the indexed file-based search store.</div>
+          </div>
+          <span class="badge green" id="search-status">Ready</span>
+        </div>
+
+        <form id="search-form">
+          <div class="form-grid">
+            <div class="full-width">
+              <label for="search-query">Query</label>
+              <input
+                id="search-query"
+                name="search-query"
+                type="text"
+                placeholder="Enter search query"
+                value="article"
+                required
+              />
+            </div>
+
+            <div>
+              <label for="search-limit">Page Size</label>
+              <input
+                id="search-limit"
+                name="search-limit"
+                type="number"
+                min="1"
+                value="10"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="button-row">
+            <button type="submit" class="btn-primary">Search</button>
+            <button type="button" class="btn-secondary" id="lucky-btn">Feeling Lucky</button>
+            <button type="button" class="btn-secondary" id="assignment-btn">Assignment Format</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Search Summary</h2>
+
+        <div class="status-box">
+          <div class="row">
+            <span>Current Query</span>
+            <strong id="summary-query">-</strong>
+          </div>
+        </div>
+
+        <div class="status-box">
+          <div class="row">
+            <span>Result Count</span>
+            <strong id="summary-count">0</strong>
+          </div>
+        </div>
+
+        <div class="status-box">
+          <div class="row">
+            <span>Lucky Term</span>
+            <strong id="summary-lucky">-</strong>
+          </div>
+        </div>
+
+        <div class="status-box">
+          <div class="row">
+            <span>Status</span>
+            <strong id="summary-status">Idle</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid stats-grid">
+      <div class="card stat-card">
+        <p>Last Result Count</p>
+        <h3 id="stat-result-count">0</h3>
+      </div>
+
+      <div class="card stat-card">
+        <p>Top Result Depth</p>
+        <h3 id="stat-top-depth">-</h3>
+      </div>
+
+      <div class="card stat-card">
+        <p>Top Result Frequency</p>
+        <h3 id="stat-top-frequency">-</h3>
+      </div>
+
+      <div class="card stat-card">
+        <p>Top Result Score</p>
+        <h3 id="stat-top-score">-</h3>
+      </div>
+    </div>
+
+    <div class="grid" style="margin-top: 20px;">
+      <div class="card">
+        <div class="row">
+          <div>
+            <h2>Search Results</h2>
+            <div class="subtext">Ranked results returned by the search service.</div>
+          </div>
+          <span class="muted-small" id="result-label">0 results</span>
+        </div>
+
+        <div class="row" style="margin-top: 12px;">
+          <span class="muted-small" id="pagination-label">Page 1 of 1</span>
+          <div class="button-row" style="margin-top: 0;">
+            <button type="button" class="btn-secondary" id="prev-page-btn">Previous</button>
+            <button type="button" class="btn-secondary" id="next-page-btn">Next</button>
+          </div>
+        </div>
+
+        <div id="search-results">
+          <div class="result-card">No search performed yet.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid" style="margin-top: 20px;">
+      <div class="card">
+        <div class="row">
+          <div>
+            <h2>Assignment Format Preview</h2>
+            <div class="subtext">Shows results as (relevant_url, origin_url, depth).</div>
+          </div>
+        </div>
+
+        <div
+          id="assignment-results"
+          class="result-card"
+          style="min-height: 120px; white-space: pre-wrap; font-family: monospace;"
+        >
+No assignment-format search yet.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='search.js') }}"></script>
+</body>
+</html>

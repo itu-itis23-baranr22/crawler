@@ -1,0 +1,20 @@
+{
+  "crawler_id": "crawler_1774041059775",
+  "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+  "status": "completed",
+  "max_depth": 2,
+  "max_pages": 20,
+  "hit_rate": 1.0,
+  "queue_limit": 1000,
+  "pages_crawled": 20,
+  "failed_pages": 1,
+  "queue_size": 1000,
+  "visited_count": 2420,
+  "indexed_documents": 63,
+  "unique_terms": 17925,
+  "total_postings": 55210,
+  "bucket_files": 27,
+  "created_at": 1774041059.7750869,
+  "updated_at": 1774041118.6374173,
+  "updated_at_iso": "2026-03-20T21:11:58.986323"
+}

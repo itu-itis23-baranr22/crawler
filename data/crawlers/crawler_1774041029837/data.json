@@ -1,0 +1,20 @@
+{
+  "crawler_id": "crawler_1774041029837",
+  "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+  "status": "completed",
+  "max_depth": 2,
+  "max_pages": 20,
+  "hit_rate": 1.0,
+  "queue_limit": 1000,
+  "pages_crawled": 20,
+  "failed_pages": 0,
+  "queue_size": 1000,
+  "visited_count": 2254,
+  "indexed_documents": 58,
+  "unique_terms": 17797,
+  "total_postings": 53658,
+  "bucket_files": 27,
+  "created_at": 1774041029.8374271,
+  "updated_at": 1774041085.7783606,
+  "updated_at_iso": "2026-03-20T21:11:26.051105"
+}

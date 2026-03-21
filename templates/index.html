@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Crawler Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Web Crawler Dashboard</h1>
+      <p>Manage multiple crawler jobs, monitor status, inspect logs, and track indexed words.</p>
+    </div>
+
+    <div class="button-row" style="margin-top: 20px; margin-bottom: 20px;">
+      <a href="/search" style="text-decoration: none;">
+        <button type="button" class="btn-primary">Go to Search Page</button>
+      </a>
+    </div>
+
+    <div class="grid top-grid">
+      <div class="card">
+        <div class="row">
+          <div>
+            <h2>Create New Crawler</h2>
+            <div class="subtext">Launch a crawler job with depth, page, and hit-rate controls.</div>
+          </div>
+          <span class="badge green" id="system-health">Ready</span>
+        </div>
+
+        <form id="crawler-form">
+          <div class="form-grid">
+            <div class="full-width">
+              <label for="origin">Origin URL</label>
+              <input
+                id="origin"
+                name="origin"
+                type="url"
+                value="https://en.wikipedia.org/wiki/Web_crawler"
+                required
+              />
+            </div>
+
+            <div>
+              <label for="max_depth">Max Depth</label>
+              <input id="max_depth" name="max_depth" type="number" min="0" value="2" required />
+            </div>
+
+            <div>
+              <label for="max_pages">Max Pages</label>
+              <input id="max_pages" name="max_pages" type="number" min="1" value="20" required />
+            </div>
+
+            <div>
+              <label for="hit_rate">Hit Rate (pages/sec)</label>
+              <input id="hit_rate" name="hit_rate" type="number" min="0.1" step="0.1" value="1" required />
+            </div>
+
+            <div>
+              <label for="queue_limit">Queue Limit</label>
+              <input id="queue_limit" name="queue_limit" type="number" min="1" value="1000" required />
+            </div>
+          </div>
+
+          <div class="button-row">
+            <button type="submit" class="btn-primary">Create Crawler</button>
+            <button type="button" class="btn-secondary" id="refresh-btn">Refresh List</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Overview</h2>
+
+        <div class="status-box">
+          <div class="row">
+            <span>Total Crawlers</span>
+            <strong id="total-crawlers">0</strong>
+          </div>
+        </div>
+
+        <div class="status-box">
+          <div class="row">
+            <span>Running</span>
+            <strong id="running-crawlers">0</strong>
+          </div>
+        </div>
+
+        <div class="status-box">
+          <div class="row">
+            <span>Paused</span>
+            <strong id="paused-crawlers">0</strong>
+          </div>
+        </div>
+
+        <div class="status-box">
+          <div class="row">
+            <span>Completed / Stopped</span>
+            <strong id="finished-crawlers">0</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid stats-grid">
+      <div class="card stat-card">
+        <p>Loaded Jobs</p>
+        <h3 id="loaded-jobs">0</h3>
+      </div>
+
+      <div class="card stat-card">
+        <p>Running Jobs</p>
+        <h3 id="running-jobs">0</h3>
+      </div>
+
+      <div class="card stat-card">
+        <p>Paused Jobs</p>
+        <h3 id="paused-jobs">0</h3>
+      </div>
+
+      <div class="card stat-card">
+        <p>Finished Jobs</p>
+        <h3 id="finished-jobs">0</h3>
+      </div>
+    </div>
+
+    <div class="grid stats-grid">
+      <div class="card stat-card">
+        <p>Total Indexed Documents</p>
+        <h3 id="total-indexed-documents">0</h3>
+      </div>
+
+      <div class="card stat-card">
+        <p>Total Unique Terms</p>
+        <h3 id="total-unique-terms">0</h3>
+      </div>
+
+      <div class="card stat-card">
+        <p>Total Postings</p>
+        <h3 id="total-postings">0</h3>
+      </div>
+
+      <div class="card stat-card">
+        <p>Bucket Files</p>
+        <h3 id="total-bucket-files">0</h3>
+      </div>
+    </div>
+
+    <div class="grid" style="margin-top: 20px;">
+      <div class="card">
+        <div class="row">
+          <div>
+            <h2>Crawler Jobs</h2>
+            <div class="subtext">All crawlers currently known by the system.</div>
+          </div>
+          <span class="muted-small" id="crawler-count-label">0 crawlers</span>
+        </div>
+
+        <div id="crawler-list"></div>
+      </div>
+    </div>
+
+    <div class="grid" style="margin-top: 20px;">
+      <div class="card">
+        <div class="row">
+          <div>
+            <h2>Crawler Logs</h2>
+            <div class="subtext">Click “View Logs” on a crawler card to inspect recent log entries.</div>
+          </div>
+          <span class="muted-small" id="selected-log-label">No crawler selected</span>
+        </div>
+
+        <div
+          id="log-viewer"
+          class="result-card"
+          style="min-height: 120px; white-space: pre-wrap; font-family: monospace;"
+        >
+          No logs loaded yet.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

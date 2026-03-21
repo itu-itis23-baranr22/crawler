@@ -1,0 +1,5736 @@
+{
+  "y": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Web_crawler",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Main_Page",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Web_crawler&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Terrorism",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 5
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Talk:Rape",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Rape&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Terrorism&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 9
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 7,
+      "total_frequency": 7
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Anasayfa",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 9,
+      "total_frequency": 9
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 39,
+      "total_frequency": 39
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:G%C3%B6z_at",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 6,
+      "total_frequency": 6
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Nikolay_Mongu%C5%9F",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Se%C3%A7kin_i%C3%A7erik",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 5,
+      "total_frequency": 5
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:Yak%C4%B1n%C4%B1mdakiler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Deneme_tahtas%C4%B1",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:K%C3%B6y_%C3%A7e%C5%9Fmesi",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 1,
+      "body_frequency": 19,
+      "total_frequency": 20
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:SonDe%C4%9Fi%C5%9Fiklikler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 22,
+      "total_frequency": 22
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Y%C3%BCkle",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 1,
+      "body_frequency": 24,
+      "total_frequency": 25
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 66,
+      "total_frequency": 66
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Yard%C4%B1m:%C4%B0%C3%A7indekiler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 5,
+      "total_frequency": 5
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:%C3%96zelSayfalar",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 17,
+      "total_frequency": 17
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:Ara",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Psittaculirostris_edwardsii",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://auth.wikimedia.org/trwiki/wiki/%C3%96zel:HesapOlu%C5%9Ftur?useformat=desktop&usesul3=1&returnto=NF+%28m%C3%BCzisyen%29&centralauthLoginToken=1c594ad229abb183b33aa5470c1ec965",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://auth.wikimedia.org/trwiki/wiki/%C3%96zel:Kullan%C4%B1c%C4%B1OturumuA%C3%A7ma?useformat=desktop&usesul3=1&returnto=NF+%28m%C3%BCzisyen%29&centralauthLoginToken=d9e079d6a5ba43b267c9b3333bc144ef",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Tart%C4%B1%C5%9Fma:NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 4,
+      "total_frequency": 4
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&veaction=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 7,
+      "total_frequency": 7
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 8,
+      "total_frequency": 8
+    },
+    {
+      "url": "https://auth.wikimedia.org/trwiki/wiki/%C3%96zel:HesapOlu%C5%9Ftur?useformat=desktop&usesul3=1&returnto=Kategori%3AParklar&centralauthLoginToken=6fb283d7022d088f27e89cf64e258703",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://auth.wikimedia.org/trwiki/wiki/%C3%96zel:Kullan%C4%B1c%C4%B1OturumuA%C3%A7ma?useformat=desktop&usesul3=1&returnto=Kategori%3AParklar&centralauthLoginToken=f1dd93aa794381b72871bed3d846a6af",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&veaction=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=history",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 8,
+      "total_frequency": 8
+    }
+  ],
+  "yacy": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Web_crawler",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Web_crawler&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yahoo": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Web_crawler",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 4,
+      "total_frequency": 4
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Portal:Current_events",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Web_crawler&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 4,
+      "total_frequency": 4
+    }
+  ],
+  "yates": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Web_crawler",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Web_crawler&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    }
+  ],
+  "years": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Web_crawler",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Portal:Current_events",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:About",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:File_upload_wizard",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Talk:Web_crawler",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Web_crawler&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Rape",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 7
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Terrorism",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 7
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Joe_Shannon_(chef)",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Talk:Rape",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Rape&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 7
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Terrorism&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 9
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Main_Page",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yet": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Web_crawler",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:File_upload_wizard",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 5,
+      "total_frequency": 5
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Web_crawler&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Rape",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Terrorism",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 3
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Rape&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Talk:Terrorism",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Terrorism&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 4
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:K%C3%B6y_%C3%A7e%C5%9Fmesi",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Yard%C4%B1m:%C4%B0%C3%A7indekiler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yields": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Web_crawler",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Web_crawler&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Rape",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Rape&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    }
+  ],
+  "you": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Web_crawler",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Main_Page",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:Contents",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Portal:Current_events",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/%C5%A0iljkova%C4%8Da",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:About",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:Contact_us",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 11,
+      "total_frequency": 11
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Help:Contents",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 22,
+      "total_frequency": 22
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Help:Introduction",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 4,
+      "total_frequency": 4
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:Community_portal",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 23,
+      "total_frequency": 23
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Special:RecentChanges",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:File_upload_wizard",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 105,
+      "total_frequency": 105
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Special:SpecialPages",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:CreateAccount?useformat=desktop&usesul3=1&returnto=Web+crawler&centralauthLoginToken=f73cd05d3372b5d14cbed705345822bd",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:UserLogin?useformat=desktop&usesul3=1&returnto=Web+crawler&centralauthLoginToken=c28b7c9bd6d409eb2c22c2c4f72090ab",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Talk:Web_crawler",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 5,
+      "total_frequency": 5
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Web_crawler&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 9,
+      "total_frequency": 9
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Rape",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 3
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Dave_Dephoff",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Terrorism",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 7
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Joe_Shannon_(chef)",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:CreateAccount?useformat=desktop&usesul3=1&returnto=Rape&centralauthLoginToken=337dc4cac832faa24921a5257dc58c67",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:UserLogin?useformat=desktop&usesul3=1&returnto=Rape&centralauthLoginToken=23319bbc18ec7bbc7c49b5ffbf1c64e8",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Talk:Rape",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 26
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Rape&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 11
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Rape&action=history",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:CreateAccount?useformat=desktop&usesul3=1&returnto=Terrorism&centralauthLoginToken=cf4f2da23982473abd591e1deae92e5d",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:UserLogin?useformat=desktop&usesul3=1&returnto=Terrorism&centralauthLoginToken=04f0883abac9738a93748f24a43c505d",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Talk:Terrorism",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 20
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Terrorism&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 18
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Terrorism&action=history",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Opinion_polling_on_the_Lam_government",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 8,
+      "total_frequency": 8
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/List_of_Trotskyist_organizations_by_country",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Arif_Virani",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:CreateAccount?useformat=desktop&usesul3=1&returnto=Web+crawler&centralauthLoginToken=fec64d8cd3434b8b3d3e11838cecb2d7",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:UserLogin?useformat=desktop&usesul3=1&returnto=Web+crawler&centralauthLoginToken=9220f692d955cd4c7209bf08a2e21a75",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:CreateAccount?useformat=desktop&usesul3=1&returnto=Web+crawler&centralauthLoginToken=715dfd86867c07d5b6f0f193f540c6e1",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:CreateAccount?useformat=desktop&usesul3=1&returnto=Web+crawler&centralauthLoginToken=d21141c01542fcf90e85cda5e01fca03",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:UserLogin?useformat=desktop&usesul3=1&returnto=Web+crawler&centralauthLoginToken=f12f720d4229778b61fd3ee28320a707",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:UserLogin?useformat=desktop&usesul3=1&returnto=Web+crawler&centralauthLoginToken=9b799f7c9dbbebeda97dc5ccc9dc926b",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "your": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Web_crawler",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:About",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:Contact_us",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 7,
+      "total_frequency": 7
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Help:Contents",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 11,
+      "total_frequency": 11
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:Community_portal",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 25,
+      "total_frequency": 25
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:File_upload_wizard",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 33,
+      "total_frequency": 33
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Special:SpecialPages",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 4,
+      "total_frequency": 4
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:CreateAccount?useformat=desktop&usesul3=1&returnto=Web+crawler&centralauthLoginToken=f73cd05d3372b5d14cbed705345822bd",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 5
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:UserLogin?useformat=desktop&usesul3=1&returnto=Web+crawler&centralauthLoginToken=c28b7c9bd6d409eb2c22c2c4f72090ab",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Web_crawler&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 9,
+      "total_frequency": 9
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Rape",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 2
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Terrorism",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 3
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:CreateAccount?useformat=desktop&usesul3=1&returnto=Rape&centralauthLoginToken=337dc4cac832faa24921a5257dc58c67",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 5
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:UserLogin?useformat=desktop&usesul3=1&returnto=Rape&centralauthLoginToken=23319bbc18ec7bbc7c49b5ffbf1c64e8",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Talk:Rape",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 4
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Rape&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:CreateAccount?useformat=desktop&usesul3=1&returnto=Terrorism&centralauthLoginToken=cf4f2da23982473abd591e1deae92e5d",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 5
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:UserLogin?useformat=desktop&usesul3=1&returnto=Terrorism&centralauthLoginToken=04f0883abac9738a93748f24a43c505d",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Talk:Terrorism",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Terrorism&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 4
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Opinion_polling_on_the_Lam_government",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:CreateAccount?useformat=desktop&usesul3=1&returnto=Web+crawler&centralauthLoginToken=fec64d8cd3434b8b3d3e11838cecb2d7",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 5,
+      "total_frequency": 5
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:UserLogin?useformat=desktop&usesul3=1&returnto=Web+crawler&centralauthLoginToken=9220f692d955cd4c7209bf08a2e21a75",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:CreateAccount?useformat=desktop&usesul3=1&returnto=Web+crawler&centralauthLoginToken=715dfd86867c07d5b6f0f193f540c6e1",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 5,
+      "total_frequency": 5
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:CreateAccount?useformat=desktop&usesul3=1&returnto=Web+crawler&centralauthLoginToken=d21141c01542fcf90e85cda5e01fca03",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 5,
+      "total_frequency": 5
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:UserLogin?useformat=desktop&usesul3=1&returnto=Web+crawler&centralauthLoginToken=f12f720d4229778b61fd3ee28320a707",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:UserLogin?useformat=desktop&usesul3=1&returnto=Web+crawler&centralauthLoginToken=9b799f7c9dbbebeda97dc5ccc9dc926b",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "ychi": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Main_Page",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Anasayfa",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:K%C3%B6y_%C3%A7e%C5%9Fmesi",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "year": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Main_Page",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:Contents",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Portal:Current_events",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 4,
+      "total_frequency": 4
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:Community_portal",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 9,
+      "total_frequency": 9
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:File_upload_wizard",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 6,
+      "total_frequency": 6
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:UserLogin?useformat=desktop&usesul3=1&returnto=Web+crawler&centralauthLoginToken=c28b7c9bd6d409eb2c22c2c4f72090ab",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Talk:Web_crawler",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Web_crawler&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 22,
+      "total_frequency": 22
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Rape",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 5
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Terrorism",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Joe_Shannon_(chef)",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:UserLogin?useformat=desktop&usesul3=1&returnto=Rape&centralauthLoginToken=23319bbc18ec7bbc7c49b5ffbf1c64e8",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Rape&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 73
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:UserLogin?useformat=desktop&usesul3=1&returnto=Terrorism&centralauthLoginToken=04f0883abac9738a93748f24a43c505d",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Terrorism&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 45
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Opinion_polling_on_the_Lam_government",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Arif_Virani",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:UserLogin?useformat=desktop&usesul3=1&returnto=Web+crawler&centralauthLoginToken=9220f692d955cd4c7209bf08a2e21a75",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:UserLogin?useformat=desktop&usesul3=1&returnto=Web+crawler&centralauthLoginToken=f12f720d4229778b61fd3ee28320a707",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://auth.wikimedia.org/enwiki/wiki/Special:UserLogin?useformat=desktop&usesul3=1&returnto=Web+crawler&centralauthLoginToken=9b799f7c9dbbebeda97dc5ccc9dc926b",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yerwa": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Main_Page",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:Community_portal",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Terrorism",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Anasayfa",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yor": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Main_Page",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Portal:Current_events",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:About",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:Community_portal",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Anasayfa",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Deneme_tahtas%C4%B1",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:K%C3%B6y_%C3%A7e%C5%9Fmesi",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:SonDe%C4%9Fi%C5%9Fiklikler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=history",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "york": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Main_Page",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Portal:Current_events",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Rape",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 16
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Terrorism",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 20
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Rape&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 19
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Special:RecentChanges",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Special:WhatLinksHere/Rape",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Talk:Terrorism",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Terrorism&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 20
+    }
+  ],
+  "yury": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Main_Page",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    }
+  ],
+  "yanar": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Portal:Current_events",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yar": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Portal:Current_events",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:G%C3%B6z_at",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Se%C3%A7kin_i%C3%A7erik",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:K%C3%B6y_%C3%A7e%C5%9Fmesi",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Y%C3%BCkle",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Yard%C4%B1m:%C4%B0%C3%A7indekiler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 5,
+      "total_frequency": 5
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 5,
+      "total_frequency": 5
+    }
+  ],
+  "yemen": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Portal:Current_events",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Terrorism",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "ynet": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Portal:Current_events",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Rape",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Rape&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    }
+  ],
+  "yonhap": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Portal:Current_events",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "youngest": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Portal:Current_events",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yuan": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Portal:Current_events",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "young": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:About",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Help:Contents",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:Community_portal",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Rape",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 4
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Terrorism",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Rape&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 4
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Terrorism&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    }
+  ],
+  "yourself": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Help:Contents",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:Community_portal",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "yanwu": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:Community_portal",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yearly": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:Community_portal",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "yes": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:Community_portal",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 4,
+      "total_frequency": 4
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:File_upload_wizard",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Web_crawler&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Rape",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Rape&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 21
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Terrorism&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 5
+    }
+  ],
+  "yugoslav": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:Community_portal",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yabbr": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Special:RecentChanges",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Web_crawler&action=history",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Rape&action=history",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Terrorism&action=history",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    }
+  ],
+  "yyyy": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:File_upload_wizard",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yesno": [
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Web_crawler&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Rape&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 4
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Terrorism&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 4
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "y05": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Rape",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Rape&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    }
+  ],
+  "yale": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Rape",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Terrorism",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Rape&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    }
+  ],
+  "yanomami": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Rape",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 2
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Rape&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2
+    }
+  ],
+  "ydowskich": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Rape",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Rape&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    }
+  ],
+  "yeater": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Rape",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Rape&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    }
+  ],
+  "yeung": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Rape",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Rape&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    }
+  ],
+  "yll": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Rape",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Rape&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 4
+    }
+  ],
+  "yo": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Rape",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Rape&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "youth": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Rape",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Rape&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/List_of_Trotskyist_organizations_by_country",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yugoslavia": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Rape",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Terrorism",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Rape&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    }
+  ],
+  "youngson": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Dave_Dephoff",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    }
+  ],
+  "yvette": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Dave_Dephoff",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    }
+  ],
+  "yager": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Terrorism",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Terrorism&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    }
+  ],
+  "yassin": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Terrorism",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Terrorism&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    }
+  ],
+  "yemenite": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Terrorism",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Terrorism&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    }
+  ],
+  "yerel": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Terrorism",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Terrorism&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    }
+  ],
+  "yigal": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Terrorism",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Terrorism&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    }
+  ],
+  "yisrael": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Terrorism",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 2
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Terrorism&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2
+    }
+  ],
+  "yitzhak": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Terrorism",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Terrorism&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    }
+  ],
+  "yonah": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Terrorism",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Terrorism&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    }
+  ],
+  "yuval": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Terrorism",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 3
+    },
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Terrorism&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3
+    }
+  ],
+  "yesterday": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Talk:Rape",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    }
+  ],
+  "youtube": [
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Rape&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Rape",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2
+    }
+  ],
+  "yaaadazhot": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Special:RecentChanges",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    }
+  ],
+  "yedaman54": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Special:RecentChanges",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    }
+  ],
+  "y9iwbwaaqbaj": [
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Terrorism&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1
+    }
+  ],
+  "yc5naaaamaaj": [
+    {
+      "url": "https://en.wikipedia.org/w/index.php?title=Terrorism&action=edit",
+      "origin": "https://en.wikipedia.org/wiki/Terrorism",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2
+    }
+  ],
+  "ya": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Anasayfa",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 7,
+      "total_frequency": 7
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:G%C3%B6z_at",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Nikolay_Mongu%C5%9F",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Deneme_tahtas%C4%B1",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:SonDe%C4%9Fi%C5%9Fiklikler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 5,
+      "total_frequency": 5
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Y%C3%BCkle",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 11,
+      "total_frequency": 11
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 9,
+      "total_frequency": 9
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Tart%C4%B1%C5%9Fma:NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&veaction=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 8,
+      "total_frequency": 8
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=history",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Arif_Virani",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yak": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Anasayfa",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:G%C3%B6z_at",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Nikolay_Mongu%C5%9F",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Se%C3%A7kin_i%C3%A7erik",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:Yak%C4%B1n%C4%B1mdakiler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 1,
+      "body_frequency": 6,
+      "total_frequency": 7
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Deneme_tahtas%C4%B1",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:K%C3%B6y_%C3%A7e%C5%9Fmesi",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:SonDe%C4%9Fi%C5%9Fiklikler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Y%C3%BCkle",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Yard%C4%B1m:%C4%B0%C3%A7indekiler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:%C3%96zelSayfalar",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:Ara",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Psittaculirostris_edwardsii",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://auth.wikimedia.org/trwiki/wiki/%C3%96zel:HesapOlu%C5%9Ftur?useformat=desktop&usesul3=1&returnto=NF+%28m%C3%BCzisyen%29&centralauthLoginToken=1c594ad229abb183b33aa5470c1ec965",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://auth.wikimedia.org/trwiki/wiki/%C3%96zel:Kullan%C4%B1c%C4%B1OturumuA%C3%A7ma?useformat=desktop&usesul3=1&returnto=NF+%28m%C3%BCzisyen%29&centralauthLoginToken=d9e079d6a5ba43b267c9b3333bc144ef",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Tart%C4%B1%C5%9Fma:NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&veaction=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://auth.wikimedia.org/trwiki/wiki/%C3%96zel:HesapOlu%C5%9Ftur?useformat=desktop&usesul3=1&returnto=Kategori%3AParklar&centralauthLoginToken=6fb283d7022d088f27e89cf64e258703",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://auth.wikimedia.org/trwiki/wiki/%C3%96zel:Kullan%C4%B1c%C4%B1OturumuA%C3%A7ma?useformat=desktop&usesul3=1&returnto=Kategori%3AParklar&centralauthLoginToken=f1dd93aa794381b72871bed3d846a6af",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&veaction=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=history",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yap": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Anasayfa",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 14,
+      "total_frequency": 14
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:G%C3%B6z_at",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Nikolay_Mongu%C5%9F",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Se%C3%A7kin_i%C3%A7erik",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:Yak%C4%B1n%C4%B1mdakiler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Deneme_tahtas%C4%B1",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:K%C3%B6y_%C3%A7e%C5%9Fmesi",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 4,
+      "total_frequency": 4
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:SonDe%C4%9Fi%C5%9Fiklikler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 10,
+      "total_frequency": 10
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Y%C3%BCkle",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 10,
+      "total_frequency": 10
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Yard%C4%B1m:%C4%B0%C3%A7indekiler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:%C3%96zelSayfalar",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 6,
+      "total_frequency": 6
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:Ara",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Psittaculirostris_edwardsii",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://auth.wikimedia.org/trwiki/wiki/%C3%96zel:HesapOlu%C5%9Ftur?useformat=desktop&usesul3=1&returnto=NF+%28m%C3%BCzisyen%29&centralauthLoginToken=1c594ad229abb183b33aa5470c1ec965",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://auth.wikimedia.org/trwiki/wiki/%C3%96zel:Kullan%C4%B1c%C4%B1OturumuA%C3%A7ma?useformat=desktop&usesul3=1&returnto=NF+%28m%C3%BCzisyen%29&centralauthLoginToken=d9e079d6a5ba43b267c9b3333bc144ef",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Tart%C4%B1%C5%9Fma:NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&veaction=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 5,
+      "total_frequency": 5
+    },
+    {
+      "url": "https://auth.wikimedia.org/trwiki/wiki/%C3%96zel:HesapOlu%C5%9Ftur?useformat=desktop&usesul3=1&returnto=Kategori%3AParklar&centralauthLoginToken=6fb283d7022d088f27e89cf64e258703",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://auth.wikimedia.org/trwiki/wiki/%C3%96zel:Kullan%C4%B1c%C4%B1OturumuA%C3%A7ma?useformat=desktop&usesul3=1&returnto=Kategori%3AParklar&centralauthLoginToken=f1dd93aa794381b72871bed3d846a6af",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&veaction=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=history",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 6,
+      "total_frequency": 6
+    }
+  ],
+  "yard": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Anasayfa",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 9,
+      "total_frequency": 9
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:G%C3%B6z_at",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Nikolay_Mongu%C5%9F",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Se%C3%A7kin_i%C3%A7erik",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:Yak%C4%B1n%C4%B1mdakiler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Deneme_tahtas%C4%B1",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:K%C3%B6y_%C3%A7e%C5%9Fmesi",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:SonDe%C4%9Fi%C5%9Fiklikler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 5,
+      "total_frequency": 5
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Y%C3%BCkle",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 15,
+      "total_frequency": 15
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Yard%C4%B1m:%C4%B0%C3%A7indekiler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 1,
+      "body_frequency": 11,
+      "total_frequency": 12
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:%C3%96zelSayfalar",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:Ara",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Psittaculirostris_edwardsii",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://auth.wikimedia.org/trwiki/wiki/%C3%96zel:HesapOlu%C5%9Ftur?useformat=desktop&usesul3=1&returnto=NF+%28m%C3%BCzisyen%29&centralauthLoginToken=1c594ad229abb183b33aa5470c1ec965",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://auth.wikimedia.org/trwiki/wiki/%C3%96zel:Kullan%C4%B1c%C4%B1OturumuA%C3%A7ma?useformat=desktop&usesul3=1&returnto=NF+%28m%C3%BCzisyen%29&centralauthLoginToken=d9e079d6a5ba43b267c9b3333bc144ef",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Tart%C4%B1%C5%9Fma:NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&veaction=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 4,
+      "total_frequency": 4
+    },
+    {
+      "url": "https://auth.wikimedia.org/trwiki/wiki/%C3%96zel:HesapOlu%C5%9Ftur?useformat=desktop&usesul3=1&returnto=Kategori%3AParklar&centralauthLoginToken=6fb283d7022d088f27e89cf64e258703",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://auth.wikimedia.org/trwiki/wiki/%C3%96zel:Kullan%C4%B1c%C4%B1OturumuA%C3%A7ma?useformat=desktop&usesul3=1&returnto=Kategori%3AParklar&centralauthLoginToken=f1dd93aa794381b72871bed3d846a6af",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&veaction=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=history",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 4,
+      "total_frequency": 4
+    }
+  ],
+  "yay": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Deneme_tahtas%C4%B1",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&veaction=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 5,
+      "total_frequency": 5
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yazar": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Nikolay_Mongu%C5%9F",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Y%C3%BCkle",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Tart%C4%B1%C5%9Fma:NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&veaction=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "yazarlar": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 6,
+      "total_frequency": 6
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:SonDe%C4%9Fi%C5%9Fiklikler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&veaction=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yazd": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Anasayfa",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:G%C3%B6z_at",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Nikolay_Mongu%C5%9F",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Se%C3%A7kin_i%C3%A7erik",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Deneme_tahtas%C4%B1",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:K%C3%B6y_%C3%A7e%C5%9Fmesi",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Y%C3%BCkle",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Yard%C4%B1m:%C4%B0%C3%A7indekiler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Psittaculirostris_edwardsii",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Tart%C4%B1%C5%9Fma:NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&veaction=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&veaction=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yer": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Anasayfa",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 5,
+      "total_frequency": 5
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:G%C3%B6z_at",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Se%C3%A7kin_i%C3%A7erik",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:SonDe%C4%9Fi%C5%9Fiklikler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Y%C3%BCkle",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 5,
+      "total_frequency": 5
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&veaction=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "yi": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Anasayfa",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 10,
+      "total_frequency": 10
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:G%C3%B6z_at",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Nikolay_Mongu%C5%9F",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Se%C3%A7kin_i%C3%A7erik",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:Yak%C4%B1n%C4%B1mdakiler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Deneme_tahtas%C4%B1",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:K%C3%B6y_%C3%A7e%C5%9Fmesi",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:SonDe%C4%9Fi%C5%9Fiklikler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Y%C3%BCkle",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 12,
+      "total_frequency": 12
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Yard%C4%B1m:%C4%B0%C3%A7indekiler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:%C3%96zelSayfalar",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:Ara",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Psittaculirostris_edwardsii",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://auth.wikimedia.org/trwiki/wiki/%C3%96zel:HesapOlu%C5%9Ftur?useformat=desktop&usesul3=1&returnto=NF+%28m%C3%BCzisyen%29&centralauthLoginToken=1c594ad229abb183b33aa5470c1ec965",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://auth.wikimedia.org/trwiki/wiki/%C3%96zel:Kullan%C4%B1c%C4%B1OturumuA%C3%A7ma?useformat=desktop&usesul3=1&returnto=NF+%28m%C3%BCzisyen%29&centralauthLoginToken=d9e079d6a5ba43b267c9b3333bc144ef",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Tart%C4%B1%C5%9Fma:NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&veaction=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://auth.wikimedia.org/trwiki/wiki/%C3%96zel:HesapOlu%C5%9Ftur?useformat=desktop&usesul3=1&returnto=Kategori%3AParklar&centralauthLoginToken=6fb283d7022d088f27e89cf64e258703",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://auth.wikimedia.org/trwiki/wiki/%C3%96zel:Kullan%C4%B1c%C4%B1OturumuA%C3%A7ma?useformat=desktop&usesul3=1&returnto=Kategori%3AParklar&centralauthLoginToken=f1dd93aa794381b72871bed3d846a6af",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&veaction=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=history",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yla": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Anasayfa",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 8,
+      "total_frequency": 8
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Tart%C4%B1%C5%9Fma:NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&veaction=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yaln": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Anasayfa",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Tart%C4%B1%C5%9Fma:NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yan": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Anasayfa",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 4,
+      "total_frequency": 4
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:K%C3%B6y_%C3%A7e%C5%9Fmesi",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 6,
+      "total_frequency": 6
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:SonDe%C4%9Fi%C5%9Fiklikler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Yard%C4%B1m:%C4%B0%C3%A7indekiler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Tart%C4%B1%C5%9Fma:NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 4,
+      "total_frequency": 4
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=history",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "yaraland": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Anasayfa",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yasla": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Anasayfa",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yaz": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Anasayfa",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 19,
+      "total_frequency": 19
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:SonDe%C4%9Fi%C5%9Fiklikler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 11,
+      "total_frequency": 11
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Yard%C4%B1m:%C4%B0%C3%A7indekiler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "ye": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Anasayfa",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 15,
+      "total_frequency": 15
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Nikolay_Mongu%C5%9F",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Se%C3%A7kin_i%C3%A7erik",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Deneme_tahtas%C4%B1",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:K%C3%B6y_%C3%A7e%C5%9Fmesi",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:SonDe%C4%9Fi%C5%9Fiklikler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Y%C3%BCkle",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 7,
+      "total_frequency": 7
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Yard%C4%B1m:%C4%B0%C3%A7indekiler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:%C3%96zelSayfalar",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Psittaculirostris_edwardsii",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://auth.wikimedia.org/trwiki/wiki/%C3%96zel:Kullan%C4%B1c%C4%B1OturumuA%C3%A7ma?useformat=desktop&usesul3=1&returnto=NF+%28m%C3%BCzisyen%29&centralauthLoginToken=d9e079d6a5ba43b267c9b3333bc144ef",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://auth.wikimedia.org/trwiki/wiki/%C3%96zel:Kullan%C4%B1c%C4%B1OturumuA%C3%A7ma?useformat=desktop&usesul3=1&returnto=Kategori%3AParklar&centralauthLoginToken=f1dd93aa794381b72871bed3d846a6af",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&veaction=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yedi": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Anasayfa",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yeni": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Anasayfa",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 9,
+      "total_frequency": 9
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:G%C3%B6z_at",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Se%C3%A7kin_i%C3%A7erik",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:K%C3%B6y_%C3%A7e%C5%9Fmesi",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:SonDe%C4%9Fi%C5%9Fiklikler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 24,
+      "total_frequency": 24
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Y%C3%BCkle",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 8,
+      "total_frequency": 8
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:%C3%96zelSayfalar",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 4,
+      "total_frequency": 4
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Psittaculirostris_edwardsii",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Tart%C4%B1%C5%9Fma:NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 4,
+      "total_frequency": 4
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=history",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 13,
+      "total_frequency": 13
+    }
+  ],
+  "yerde": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Anasayfa",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "yakla": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    }
+  ],
+  "yandan": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yani": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Nikolay_Mongu%C5%9F",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yanl": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 7,
+      "total_frequency": 7
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "yans": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:%C3%96zelSayfalar",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yapabilece": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yapabilir": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Tart%C4%B1%C5%9Fma:NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "yapma": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Yard%C4%B1m:%C4%B0%C3%A7indekiler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yapmad": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yapmakta": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yapman": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Yard%C4%B1m:%C4%B0%C3%A7indekiler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yapt": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Deneme_tahtas%C4%B1",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Tart%C4%B1%C5%9Fma:NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yararl": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "yararlanabilecektir": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yarat": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Y%C3%BCkle",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "yaratma": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 4,
+      "total_frequency": 4
+    }
+  ],
+  "yarayan": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yarg": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yasland": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "yava": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yazabilirsiniz": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yazan": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Tart%C4%B1%C5%9Fma:NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yazarl": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "yazmak": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yemekten": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yeniden": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:%C3%96zelSayfalar",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "yenileri": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yerine": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Y%C3%BCkle",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yerini": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yesi": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yeterli": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Deneme_tahtas%C4%B1",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yle": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Yard%C4%B1m:%C4%B0%C3%A7indekiler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Tart%C4%B1%C5%9Fma:NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "ylece": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Y%C3%BCkle",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "ylelikle": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "yoktur": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 4,
+      "total_frequency": 4
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yol": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&veaction=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yollar": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 5,
+      "total_frequency": 5
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Yard%C4%B1m:%C4%B0%C3%A7indekiler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "yolu": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yoludur": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yoluyla": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yorlard": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yorsan": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Y%C3%BCkle",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yorumlanacakt": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yorumlar": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:K%C3%B6y_%C3%A7e%C5%9Fmesi",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Tart%C4%B1%C5%9Fma:NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yorumlarda": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "ysa": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "ysan": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Hakk%C4%B1nda",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yeme": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:G%C3%B6z_at",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yeralt": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:G%C3%B6z_at",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yery": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:G%C3%B6z_at",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yavuz": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Se%C3%A7kin_i%C3%A7erik",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yunanistan": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Se%C3%A7kin_i%C3%A7erik",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "yaparken": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Deneme_tahtas%C4%B1",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yapmaya": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Deneme_tahtas%C4%B1",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yararlanabilirsiniz": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Deneme_tahtas%C4%B1",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yazma": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Deneme_tahtas%C4%B1",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yukar": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Deneme_tahtas%C4%B1",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yapmak": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:K%C3%B6y_%C3%A7e%C5%9Fmesi",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 4,
+      "total_frequency": 4
+    }
+  ],
+  "yapmay": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:K%C3%B6y_%C3%A7e%C5%9Fmesi",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yasak": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:K%C3%B6y_%C3%A7e%C5%9Fmesi",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yasakt": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:K%C3%B6y_%C3%A7e%C5%9Fmesi",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yetiniz": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:K%C3%B6y_%C3%A7e%C5%9Fmesi",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yetlerinizi": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:K%C3%B6y_%C3%A7e%C5%9Fmesi",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yorum": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:K%C3%B6y_%C3%A7e%C5%9Fmesi",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:%C3%96zelSayfalar",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Tart%C4%B1%C5%9Fma:NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 5,
+      "total_frequency": 5
+    }
+  ],
+  "yapay": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:SonDe%C4%9Fi%C5%9Fiklikler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=history",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "yere": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:SonDe%C4%9Fi%C5%9Fiklikler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yerle": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:SonDe%C4%9Fi%C5%9Fiklikler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 4,
+      "total_frequency": 4
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=history",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yorlar": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:SonDe%C4%9Fi%C5%9Fiklikler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yorumcular": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:SonDe%C4%9Fi%C5%9Fiklikler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 10,
+      "total_frequency": 10
+    }
+  ],
+  "yorumuyla": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:SonDe%C4%9Fi%C5%9Fiklikler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yuvas": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:SonDe%C4%9Fi%C5%9Fiklikler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "yakalama": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Y%C3%BCkle",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yararlanabilir": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Y%C3%BCkle",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yaratt": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Y%C3%BCkle",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yk": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Y%C3%BCkle",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "ykl": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Y%C3%BCkle",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yabanc": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yal": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yang": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "yapabilecek": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yasaklama": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yasaklar": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yazmaktan": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "yemi": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "yener": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "yeniler": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yeri": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yerleri": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "yetki": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yetkilerinin": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yok": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 3,
+      "total_frequency": 3
+    },
+    {
+      "url": "https://auth.wikimedia.org/trwiki/wiki/%C3%96zel:Kullan%C4%B1c%C4%B1OturumuA%C3%A7ma?useformat=desktop&usesul3=1&returnto=NF+%28m%C3%BCzisyen%29&centralauthLoginToken=d9e079d6a5ba43b267c9b3333bc144ef",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://auth.wikimedia.org/trwiki/wiki/%C3%96zel:Kullan%C4%B1c%C4%B1OturumuA%C3%A7ma?useformat=desktop&usesul3=1&returnto=Kategori%3AParklar&centralauthLoginToken=f1dd93aa794381b72871bed3d846a6af",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=history",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "yoksay": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Vikipedi:Topluluk_portali",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ],
+  "yerler": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 0,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&veaction=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yardim": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Yard%C4%B1m:%C4%B0%C3%A7indekiler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yetleriniz": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Yard%C4%B1m:%C4%B0%C3%A7indekiler",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yelik": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:%C3%96zelSayfalar",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yetkilendirilen": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/%C3%96zel:%C3%96zelSayfalar",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yapan": [
+    {
+      "url": "https://auth.wikimedia.org/trwiki/wiki/%C3%96zel:HesapOlu%C5%9Ftur?useformat=desktop&usesul3=1&returnto=NF+%28m%C3%BCzisyen%29&centralauthLoginToken=1c594ad229abb183b33aa5470c1ec965",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://auth.wikimedia.org/trwiki/wiki/%C3%96zel:HesapOlu%C5%9Ftur?useformat=desktop&usesul3=1&returnto=Kategori%3AParklar&centralauthLoginToken=6fb283d7022d088f27e89cf64e258703",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yenileyin": [
+    {
+      "url": "https://auth.wikimedia.org/trwiki/wiki/%C3%96zel:HesapOlu%C5%9Ftur?useformat=desktop&usesul3=1&returnto=NF+%28m%C3%BCzisyen%29&centralauthLoginToken=1c594ad229abb183b33aa5470c1ec965",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://auth.wikimedia.org/trwiki/wiki/%C3%96zel:HesapOlu%C5%9Ftur?useformat=desktop&usesul3=1&returnto=Kategori%3AParklar&centralauthLoginToken=6fb283d7022d088f27e89cf64e258703",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yabilecek": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Tart%C4%B1%C5%9Fma:NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yapanlara": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Tart%C4%B1%C5%9Fma:NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yapmam": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Tart%C4%B1%C5%9Fma:NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yayg": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Tart%C4%B1%C5%9Fma:NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yazanlar": [
+    {
+      "url": "https://tr.wikipedia.org/wiki/Tart%C4%B1%C5%9Fma:NF_(m%C3%BCzisyen)",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yetkisine": [
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yunan": [
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=NF_(m%C3%BCzisyen)&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/NF_(m%C3%BCzisyen)",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    },
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=edit",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yfdyh": [
+    {
+      "url": "https://tr.wikipedia.org/w/index.php?title=Kategori:Parklar&action=history",
+      "origin": "https://tr.wikipedia.org/wiki/Kategori:Parklar",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yanbu": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Portal:Current_events",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yaoshi": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Wikipedia:Community_portal",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "ymca": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Arif_Virani",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yves": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Arif_Virani",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 1,
+      "total_frequency": 1
+    }
+  ],
+  "yuko": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Special:RecentChanges",
+      "origin": "https://en.wikipedia.org/wiki/Web_crawler",
+      "depth": 1,
+      "title_frequency": 0,
+      "body_frequency": 2,
+      "total_frequency": 2
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "crawler_id": "crawler_1774039345700",
+  "origin": "https://en.wikipedia.org/wiki/Rape",
+  "status": "completed",
+  "max_depth": 2,
+  "max_pages": 20,
+  "hit_rate": 1.0,
+  "queue_limit": 1000,
+  "pages_crawled": 20,
+  "failed_pages": 0,
+  "queue_size": 1000,
+  "created_at": 1774039345.700047,
+  "updated_at": 1774039416.1793568,
+  "updated_at_iso": "2026-03-20T20:43:36.182470"
+}

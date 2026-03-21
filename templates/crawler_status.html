@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crawler Status</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Crawler Status</h1>
+      <p>Live crawler status page using long polling.</p>
+    </div>
+
+    <div class="button-row" style="margin-top: 20px; margin-bottom: 20px;">
+      <a href="/" style="text-decoration: none;">
+        <button type="button" class="btn-secondary">← Back to Dashboard</button>
+      </a>
+      <a href="/search" style="text-decoration: none;">
+        <button type="button" class="btn-primary">Go to Search</button>
+      </a>
+    </div>
+
+    <div class="grid top-grid">
+      <div class="card">
+        <div class="row">
+          <div>
+            <h2 id="crawler-title">{{ crawler_id }}</h2>
+            <div class="subtext">Detailed live status for this crawler job.</div>
+          </div>
+          <span class="badge green" id="crawler-status-badge">Loading</span>
+        </div>
+
+        <div class="tag-row">
+          <span class="tag">Origin: <span id="origin-value">-</span></span>
+          <span class="tag">Depth: <span id="depth-value">-</span></span>
+          <span class="tag">Queue Size: <span id="queue-value">-</span></span>
+          <span class="tag">Visited: <span id="visited-value">-</span></span>
+        </div>
+
+        <div class="tag-row">
+          <span class="tag">Pages Crawled: <span id="pages-value">-</span></span>
+          <span class="tag">Failed: <span id="failed-value">-</span></span>
+          <span class="tag">Unique Terms: <span id="terms-value">-</span></span>
+          <span class="tag">Postings: <span id="postings-value">-</span></span>
+        </div>
+
+        <div class="tag-row">
+          <span class="tag">Indexed Docs: <span id="docs-value">-</span></span>
+          <span class="tag">Buckets: <span id="buckets-value">-</span></span>
+          <span class="tag">Version: <span id="version-value">-</span></span>
+        </div>
+
+        <div class="muted-small" style="margin-top: 12px;">
+          Created: <span id="created-value">-</span>
+        </div>
+        <div class="muted-small" style="margin-top: 6px;">
+          Updated: <span id="updated-value">-</span>
+        </div>
+
+        <div class="button-row">
+          <button type="button" class="btn-secondary" id="pause-btn">Pause</button>
+          <button type="button" class="btn-secondary" id="resume-btn">Resume</button>
+          <button type="button" class="btn-danger" id="stop-btn">Stop</button>
+          <button type="button" class="btn-secondary" id="restart-btn">Restart</button>
+          <button type="button" class="btn-primary" id="refresh-logs-btn">Refresh Logs</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Polling Info</h2>
+
+        <div class="status-box">
+          <div class="row">
+            <span>Mode</span>
+            <strong>Long Polling</strong>
+          </div>
+        </div>
+
+        <div class="status-box">
+          <div class="row">
+            <span>Last Version</span>
+            <strong id="last-version">0</strong>
+          </div>
+        </div>
+
+        <div class="status-box">
+          <div class="row">
+            <span>Last Updated</span>
+            <strong id="last-updated">-</strong>
+          </div>
+        </div>
+
+        <div class="status-box">
+          <div class="row">
+            <span>Crawler ID</span>
+            <strong id="crawler-id-box">{{ crawler_id }}</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid" style="margin-top: 20px;">
+      <div class="card">
+        <h2>Logs</h2>
+        <div
+          id="log-viewer"
+          class="result-card"
+          style="min-height: 220px; white-space: pre-wrap; font-family: monospace;"
+        >
+Loading logs...
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.CRAWLER_ID = "{{ crawler_id }}";
+  </script>
+  <script src="{{ url_for('static', filename='crawler_status.js') }}"></script>
+</body>
+</html>
