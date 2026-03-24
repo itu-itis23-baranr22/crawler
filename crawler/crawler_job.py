@@ -49,7 +49,6 @@ class CrawlerJob:
         self.updated_at = time.time()
         self.status_version += 1
 
-    # ---------- Lifecycle ----------
     def start(self):
         with self.lock:
             if self.thread and self.thread.is_alive():
@@ -124,7 +123,6 @@ class CrawlerJob:
             self.thread.start()
             return True
 
-    # ---------- Main loop ----------
     def _run(self):
         while not self.stop_event.is_set():
             while self.pause_event.is_set() and not self.stop_event.is_set():
@@ -167,12 +165,12 @@ class CrawlerJob:
                 crawler_store.append_log(self.crawler_id, f"FETCH_OK {page['url']}")
 
                 file_index.add_document(
-    url=current_url,
-    origin=origin_url,
-    depth=current_depth,
-    title=page_title,
-    content=page_text,
-)
+                    url=page["url"],
+                    origin=origin,
+                    depth=depth,
+                    title=title,
+                    content=text,
+                )
 
                 self.pages_crawled += 1
                 self._touch()
@@ -208,7 +206,6 @@ class CrawlerJob:
 
         crawler_store.save_metadata(self.crawler_id, self._metadata_dict())
 
-    # ---------- Helpers ----------
     def _throttle(self):
         if self.hit_rate <= 0:
             return
@@ -248,17 +245,14 @@ class CrawlerJob:
             "max_pages": self.max_pages,
             "hit_rate": self.hit_rate,
             "queue_limit": self.queue_limit,
-
             "pages_crawled": self.pages_crawled,
             "failed_pages": self.failed_pages,
             "queue_size": self.frontier.size(),
             "visited_count": len(self.visited),
-
             "indexed_documents": index_stats.get("indexed_documents", 0),
             "unique_terms": index_stats.get("unique_terms", 0),
             "total_postings": index_stats.get("total_postings", 0),
             "bucket_files": index_stats.get("bucket_files", 0),
-
             "created_at": self.created_at,
             "updated_at": self.updated_at,
             "status_version": self.status_version,
