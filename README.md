@@ -1,208 +1,183 @@
-# Web Crawler & Search System
+# 🕷️ Web Crawler & Search System
 
-This project is a file-based web crawler and search engine that supports multiple crawler jobs, real-time monitoring, and query-based search over indexed web data.
-
-The system demonstrates the core components of a search engine pipeline:
-- Crawling
-- Indexing
-- Searching
+A file-based web crawler and search engine with real-time monitoring, multi-job support, and query-based search over indexed web data. Demonstrates the full pipeline of a search engine: **crawling → indexing → searching**.
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
-### 🕷️ Crawler Service
-- Create multiple crawler jobs
-- Each crawler runs independently (thread-based)
-- Supports:
-  - Start
-  - Pause
-  - Resume
-  - Stop
-  - Restart
-- Configurable parameters:
-  - Origin URL
-  - Max Depth
-  - Max Pages
-  - Hit Rate (pages/sec)
-  - Queue Limit
-
----
-
-### 📦 File-Based Indexing
-- Words are stored in bucket files:
-
-data/storage/a.data
-data/storage/b.data
-...
-
-
----
-
-### 🔍 Search Service
-- Query-based search
-- Exact word matching
-- Ranking based on:
-score = (frequency * 10) + 1000 - (depth * 5)
-
-
-- Supports:
-  - Relevance-based sorting
-  - Pagination (`page`, `page_size`)
-
----
-
-### 📊 User Interface
-
-#### Dashboard (`/`)
-- Create crawler jobs
-- View all crawlers
-- Control crawler lifecycle
-- View logs
-- System statistics:
-  - Indexed documents
-  - Unique terms
-  - Postings
-  - Bucket files
-
-#### Crawler Status Page (`/crawler/<id>`)
-- Dedicated page per crawler
-- Real-time updates via **long polling**
-- Displays:
-  - Status
-  - Queue size
-  - Pages crawled
-  - Failed pages
-  - Index statistics
-- Live log updates
-
-#### Search Page (`/search-page`)
-- Query-based search interface
-- Displays ranked results
-- Shows:
-  - URL
-  - Origin
-  - Depth
-  - Frequency
-  - Relevance score
-- Pagination support
+| Feature | Description |
+|---|---|
+| 🕷️ Multi-Job Crawling | Run multiple independent crawler jobs simultaneously |
+| 📦 File-Based Indexing | Words stored in alphabet-bucketed `.data` files |
+| 🔍 Ranked Search | Relevance scoring with pagination support |
+| 📊 Live Dashboard | Real-time monitoring via long polling |
 
 ---
 
 ## 🏗️ Architecture
-project/
-│
-├── app.py
-│
-├── crawler/
-│ ├── crawler_manager.py
-│ ├── crawler_job.py
-│ ├── frontier.py
-│ ├── fetcher.py
-│ └── parser.py
-│
-├── services/
-│ ├── crawler_service.py
-│ └── search_service.py
-│
-├── search/
-│ └── file_index.py
-│
-├── storage/
-│ └── crawler_store.py
-│
-├── templates/
-│ ├── index.html
-│ ├── search.html
-│ └── crawler_status.html
-│
-├── static/
-│ ├── app.js
-│ ├── search.js
-│ ├── crawler_status.js
-│ └── style.css
-│
-└── data/
 
+```
+project/
+├── app.py                          # Entry point
+│
+├── crawler/                        # Crawling engine
+│   ├── crawler_manager.py
+│   ├── crawler_job.py
+│   ├── frontier.py
+│   ├── fetcher.py
+│   └── parser.py
+│
+├── services/                       # Business logic
+│   ├── crawler_service.py
+│   └── search_service.py
+│
+├── search/                         # Search & indexing
+│   └── file_index.py
+│
+├── storage/                        # Persistence
+│   └── crawler_store.py
+│
+├── templates/                      # HTML pages
+│   ├── index.html
+│   ├── search.html
+│   └── crawler_status.html
+│
+├── static/                         # Frontend assets
+│   ├── app.js
+│   ├── search.js
+│   ├── crawler_status.js
+│   └── style.css
+│
+└── data/                           # Index storage
+    └── storage/
+        ├── a.data
+        ├── b.data
+        └── ...
+```
 
 ---
 
 ## ⚙️ How It Works
 
-### Crawling Flow
-1. A crawler is created via UI or API
-2. A unique crawler ID is generated:
+### 1 — Crawling Flow
 
-[epoch_time]_[thread_id]
+```
+Create Job → Generate ID ([epoch_time]_[thread_id])
+          → Start Thread
+          → Fetch Page
+          → Parse & Extract Words
+          → Index Words
+          → Enqueue New Links
+          → Repeat
+```
 
-3. A thread starts crawling from the origin URL
-4. Pages are fetched and parsed
-5. Extracted words are indexed
-6. New links are added to the queue
+Crawlers support full lifecycle control: **Start · Pause · Resume · Stop · Restart**
 
----
+**Configurable parameters:**
 
-### Indexing
-- Text is tokenized into words
-- Word frequencies are computed
-- Entries are stored in bucket files based on first letter
-
----
-
-### Search Flow
-1. Query is received
-2. Relevant bucket file is read
-3. Matching entries are retrieved
-4. Scores are computed:
-
-(frequency * 10) + 1000 - (depth * 5)
-
-5. Results are sorted and returned
+| Parameter | Description |
+|---|---|
+| `origin_url` | Starting URL |
+| `max_depth` | Maximum link depth |
+| `max_pages` | Page crawl limit |
+| `hit_rate` | Pages per second |
+| `queue_limit` | Max queue size |
 
 ---
 
-### Real-Time Updates (Long Polling)
-- Frontend calls:
-/api/crawlers/<id>/wait-status
+### 2 — Indexing
 
-- Backend waits until data changes or timeout
-- Enables live crawler monitoring
+- Text is tokenized into individual words
+- Word frequencies are computed per page
+- Entries are stored in bucket files by first letter:
+
+```
+data/storage/a.data   → all words starting with "a"
+data/storage/b.data   → all words starting with "b"
+...
+```
 
 ---
 
-## 📡 API Endpoints
+### 3 — Search & Ranking
 
-### Crawler
+**Score formula:**
+
+```
+score = (frequency × 10) + 1000 − (depth × 5)
+```
+
+Higher frequency and shallower depth → higher score.
+
+**Supports:** exact word matching · relevance sorting · pagination (`page`, `page_size`)
+
+---
+
+### 4 — Real-Time Updates (Long Polling)
+
+```
+Frontend  →  GET /api/crawlers/<id>/wait-status
+Backend   →  Holds request until data changes or timeout
+Frontend  →  Re-renders live stats and logs
+```
+
+---
+
+## 📡 API Reference
+
+### Crawler Endpoints
 
 | Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/api/crawlers` | Create crawler |
-| GET | `/api/crawlers` | List crawlers |
-| GET | `/api/crawlers/<id>` | Get status |
-| GET | `/api/crawlers/<id>/wait-status` | Long polling |
-| POST | `/api/crawlers/<id>/pause` | Pause |
-| POST | `/api/crawlers/<id>/resume` | Resume |
-| POST | `/api/crawlers/<id>/stop` | Stop |
-| POST | `/api/crawlers/<id>/restart` | Restart |
-| GET | `/api/crawlers/<id>/logs` | Logs |
+|---|---|---|
+| `POST` | `/api/crawlers` | Create a new crawler |
+| `GET` | `/api/crawlers` | List all crawlers |
+| `GET` | `/api/crawlers/<id>` | Get crawler status |
+| `GET` | `/api/crawlers/<id>/wait-status` | Long polling |
+| `POST` | `/api/crawlers/<id>/pause` | Pause crawler |
+| `POST` | `/api/crawlers/<id>/resume` | Resume crawler |
+| `POST` | `/api/crawlers/<id>/stop` | Stop crawler |
+| `POST` | `/api/crawlers/<id>/restart` | Restart crawler |
+| `GET` | `/api/crawlers/<id>/logs` | Fetch logs |
 
----
-
-### Search
+### Search Endpoint
 
 | Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/search` | Search (spec-compatible) |
+|---|---|---|
+| `GET` | `/search` | Query the index |
 
-Example: http://localhost:3600/search?query=python&sortBy=relevance
-
+**Example:**
+```
+GET http://localhost:3600/search?query=python&sortBy=relevance
+```
 
 ---
 
-## ▶️ How to Run
+## 📊 User Interface
+
+### Dashboard `/`
+- Create and manage crawler jobs
+- Control lifecycle (start / pause / resume / stop)
+- View live logs and system stats:
+  - Indexed documents · Unique terms · Postings · Bucket files
+
+### Crawler Status `/crawler/<id>`
+- Per-crawler dedicated page
+- Real-time updates via long polling
+- Shows: status · queue size · pages crawled · failed pages · index stats
+
+### Search Page `/search-page`
+- Query interface with ranked results
+- Displays per result: URL · Origin · Depth · Frequency · Score
+- Pagination support
+
+---
+
+## ▶️ Getting Started
 
 ```bash
 pip install flask
 python app.py
+```
 
-Open in browser: http://localhost:3600
+Open in browser: [http://localhost:3600](http://localhost:3600)
