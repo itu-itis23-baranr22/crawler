@@ -167,12 +167,12 @@ class CrawlerJob:
                 crawler_store.append_log(self.crawler_id, f"FETCH_OK {page['url']}")
 
                 file_index.add_document(
-                    url=page["url"],
-                    origin=origin,
-                    depth=depth,
-                    title=title,
-                    content=text,
-                )
+    url=current_url,
+    origin=origin_url,
+    depth=current_depth,
+    title=page_title,
+    content=page_text,
+)
 
                 self.pages_crawled += 1
                 self._touch()

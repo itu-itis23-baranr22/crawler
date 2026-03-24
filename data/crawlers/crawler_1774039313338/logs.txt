@@ -1,4 +1,0 @@
-[2026-03-20 20:41:53] START https://en.wikipedia.org/wiki/Joe_Kent depth=2
-[2026-03-20 20:41:54] FETCH_FAILED https://en.wikipedia.org/wiki/Joe_Kent depth=2
-[2026-03-20 20:41:55] COMPLETED reason=queue_empty
-[2026-03-20 20:42:31] STOPPED
