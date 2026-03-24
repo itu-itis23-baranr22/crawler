@@ -38,7 +38,7 @@
                 name="search-query"
                 type="text"
                 placeholder="Enter search query"
-                value="article"
+                value="python"
                 required
               />
             </div>
@@ -59,7 +59,6 @@
           <div class="button-row">
             <button type="submit" class="btn-primary">Search</button>
             <button type="button" class="btn-secondary" id="lucky-btn">Feeling Lucky</button>
-            <button type="button" class="btn-secondary" id="assignment-btn">Assignment Format</button>
           </div>
         </form>
       </div>
@@ -114,7 +113,7 @@
       </div>
 
       <div class="card stat-card">
-        <p>Top Result Score</p>
+        <p>Top Result Relevance</p>
         <h3 id="stat-top-score">-</h3>
       </div>
     </div>
@@ -143,24 +142,6 @@
       </div>
     </div>
 
-    <div class="grid" style="margin-top: 20px;">
-      <div class="card">
-        <div class="row">
-          <div>
-            <h2>Assignment Format Preview</h2>
-            <div class="subtext">Shows results as (relevant_url, origin_url, depth).</div>
-          </div>
-        </div>
-
-        <div
-          id="assignment-results"
-          class="result-card"
-          style="min-height: 120px; white-space: pre-wrap; font-family: monospace;"
-        >
-No assignment-format search yet.
-        </div>
-      </div>
-    </div>
   </div>
 
   <script src="{{ url_for('static', filename='search.js') }}"></script>

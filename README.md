@@ -1,11 +1,11 @@
 # Web Crawler & Search System
 
-This project is a file-based web crawler and search engine system that supports multiple crawler jobs, real-time monitoring, and query-based search over indexed data.
+This project is a file-based web crawler and search engine that supports multiple crawler jobs, real-time monitoring, and query-based search over indexed web data.
 
-The system is designed with two main components:
-
-- **Crawler Service**: Responsible for crawling web pages and building an index
-- **Search Service**: Responsible for retrieving relevant results based on queries
+The system demonstrates the core components of a search engine pipeline:
+- Crawling
+- Indexing
+- Searching
 
 ---
 
@@ -15,42 +15,49 @@ The system is designed with two main components:
 - Create multiple crawler jobs
 - Each crawler runs independently (thread-based)
 - Supports:
-  - Start / Pause / Resume / Stop / Restart
+  - Start
+  - Pause
+  - Resume
+  - Stop
+  - Restart
 - Configurable parameters:
   - Origin URL
   - Max Depth
   - Max Pages
   - Hit Rate (pages/sec)
   - Queue Limit
-- File-based persistence:
-  - Metadata
-  - Queue
-  - Visited URLs
-  - Logs
+
+---
+
+### 📦 File-Based Indexing
+- Words are stored in bucket files:
+
+data/storage/a.data
+data/storage/b.data
+...
+
 
 ---
 
 ### 🔍 Search Service
-- Query-based search over indexed data
+- Query-based search
+- Exact word matching
 - Ranking based on:
-  - Term frequency
-  - Depth (shallower = better)
+score = (frequency * 10) + 1000 - (depth * 5)
+
+
 - Supports:
-  - Normal search
-  - Assignment format `(url, origin, depth)`
-  - "Feeling Lucky" mode (random term)
-- Pagination support:
-  - `page`
-  - `page_size`
+  - Relevance-based sorting
+  - Pagination (`page`, `page_size`)
 
 ---
 
-### 📊 UI Features
+### 📊 User Interface
 
-#### 1. Dashboard (`/`)
+#### Dashboard (`/`)
 - Create crawler jobs
 - View all crawlers
-- Control crawlers (pause/resume/stop/restart)
+- Control crawler lifecycle
 - View logs
 - System statistics:
   - Indexed documents
@@ -58,10 +65,10 @@ The system is designed with two main components:
   - Postings
   - Bucket files
 
-#### 2. Crawler Status Page (`/crawler/<id>`)
+#### Crawler Status Page (`/crawler/<id>`)
 - Dedicated page per crawler
-- Real-time updates using **long polling**
-- Shows:
+- Real-time updates via **long polling**
+- Displays:
   - Status
   - Queue size
   - Pages crawled
@@ -69,19 +76,20 @@ The system is designed with two main components:
   - Index statistics
 - Live log updates
 
-#### 3. Search Page (`/search`)
-- Perform search queries
-- View ranked results
+#### Search Page (`/search-page`)
+- Query-based search interface
+- Displays ranked results
+- Shows:
+  - URL
+  - Origin
+  - Depth
+  - Frequency
+  - Relevance score
 - Pagination support
-- Assignment-format output
-- Lucky mode
 
 ---
 
 ## 🏗️ Architecture
-
-
-```
 project/
 │
 ├── app.py
@@ -115,77 +123,50 @@ project/
 │ └── style.css
 │
 └── data/
-```
+
 
 ---
 
 ## ⚙️ How It Works
 
-### Crawler Flow
+### Crawling Flow
+1. A crawler is created via UI or API
+2. A unique crawler ID is generated:
 
-1. A crawler is created via API/UI
-2. A unique ID is generated:
-
-```
 [epoch_time]_[thread_id]
 
-```
-
-3. A new thread starts crawling
-4. Pages are fetched → parsed → indexed
-5. New links are added to queue
-6. Data is persisted to files:
-- metadata
-- queue
-- visited URLs
-- logs
+3. A thread starts crawling from the origin URL
+4. Pages are fetched and parsed
+5. Extracted words are indexed
+6. New links are added to the queue
 
 ---
 
-### Indexing Strategy
-
-- Words are stored in **bucket files**
-- Each file represents a letter:
-
-```
-a.data
-b.data
-c.data
-...
-```
-
-- Each word maps to:
-- URL
-- Origin
-- Depth
-- Frequency
+### Indexing
+- Text is tokenized into words
+- Word frequencies are computed
+- Entries are stored in bucket files based on first letter
 
 ---
 
 ### Search Flow
-
 1. Query is received
-2. Terms are matched in bucket files
-3. Results are ranked using:
- - Frequency
- - Depth
-4. Results are returned with pagination
+2. Relevant bucket file is read
+3. Matching entries are retrieved
+4. Scores are computed:
+
+(frequency * 10) + 1000 - (depth * 5)
+
+5. Results are sorted and returned
 
 ---
 
-### Long Polling (Crawler Status)
+### Real-Time Updates (Long Polling)
+- Frontend calls:
+/api/crawlers/<id>/wait-status
 
-- Frontend sends:
-
-```
-/api/crawlers/<id>/wait-status?since_version=X
-```
-
-- Backend:
-- waits until status changes OR timeout
-- returns updated state
-
-This enables real-time updates without constant polling.
+- Backend waits until data changes or timeout
+- Enables live crawler monitoring
 
 ---
 
@@ -211,9 +192,10 @@ This enables real-time updates without constant polling.
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET | `/api/search` | Search |
-| GET | `/api/search/assignment` | Assignment format |
-| GET | `/api/lucky` | Random search |
+| GET | `/search` | Search (spec-compatible) |
+
+Example: http://localhost:3600/search?query=python&sortBy=relevance
+
 
 ---
 
@@ -223,6 +205,4 @@ This enables real-time updates without constant polling.
 pip install flask
 python app.py
 
-Then open:
-
-http://127.0.0.1:5000
+Open in browser: http://localhost:3600

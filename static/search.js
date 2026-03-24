@@ -16,10 +16,12 @@ function showAlert(message) {
 function setSearchStatus(text, className = "green") {
   const el = document.getElementById("search-status");
   const summary = document.getElementById("summary-status");
+
   if (el) {
     el.textContent = text;
     el.className = `badge ${className}`;
   }
+
   if (summary) {
     summary.textContent = text;
   }
@@ -44,7 +46,7 @@ function updateTopStats(results) {
   const top = results[0];
   depthEl.textContent = String(top.depth ?? "-");
   freqEl.textContent = String(top.frequency ?? "-");
-  scoreEl.textContent = String(top.score ?? "-");
+  scoreEl.textContent = String(top.relevance_score ?? "-");
 }
 
 function updatePagination(payload) {
@@ -63,16 +65,6 @@ function updatePagination(payload) {
 }
 
 function buildResultCard(result) {
-  const matchedTerms = Array.isArray(result.matched_terms)
-    ? result.matched_terms
-    : [];
-
-  const matchedTermsHtml = matchedTerms.length
-    ? matchedTerms
-        .map(term => `<span class="tag">${escapeHtml(term)}</span>`)
-        .join("")
-    : `<span class="tag">No matched terms info</span>`;
-
   return `
     <div class="result-card" style="margin-bottom: 14px;">
       <div class="row" style="align-items: flex-start;">
@@ -84,12 +76,8 @@ function buildResultCard(result) {
 
           <div class="tag-row">
             <span class="tag">Depth: ${escapeHtml(String(result.depth ?? 0))}</span>
-            <span class="tag">Score: ${escapeHtml(String(result.score ?? 0))}</span>
             <span class="tag">Frequency: ${escapeHtml(String(result.frequency ?? 0))}</span>
-          </div>
-
-          <div class="tag-row" style="margin-top: 10px;">
-            ${matchedTermsHtml}
+            <span class="tag">Relevance: ${escapeHtml(String(result.relevance_score ?? 0))}</span>
           </div>
         </div>
       </div>
@@ -147,7 +135,7 @@ async function performSearch(query, page, pageSize) {
   setSearchStatus("Searching...", "blue");
 
   const response = await fetch(
-    `/api/search?query=${encodeURIComponent(query)}&page=${encodeURIComponent(page)}&page_size=${encodeURIComponent(pageSize)}`
+    `/search?query=${encodeURIComponent(query)}&sortBy=relevance&page=${encodeURIComponent(page)}&page_size=${encodeURIComponent(pageSize)}`
   );
   const data = await response.json();
 
@@ -159,7 +147,7 @@ async function performLucky(pageSize) {
   setSearchStatus("Lucky...", "blue");
 
   const response = await fetch(
-    `/api/lucky?page_size=${encodeURIComponent(pageSize)}`
+    `/lucky?page_size=${encodeURIComponent(pageSize)}`
   );
   const data = await response.json();
 
@@ -176,7 +164,7 @@ async function performAssignmentSearch(query, page, pageSize) {
   setSearchStatus("Formatting...", "blue");
 
   const response = await fetch(
-    `/api/search/assignment?query=${encodeURIComponent(query)}&page=${encodeURIComponent(page)}&page_size=${encodeURIComponent(pageSize)}`
+    `/search/assignment?query=${encodeURIComponent(query)}&page=${encodeURIComponent(page)}&page_size=${encodeURIComponent(pageSize)}`
   );
   const data = await response.json();
 
@@ -205,7 +193,7 @@ async function initializeSearchPage() {
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
 
-      currentQuery = document.getElementById("search-query").value.trim();
+      currentQuery = document.getElementById("search-query").value.trim().toLowerCase();
       currentPageSize = Number(document.getElementById("search-limit").value);
       currentPage = 1;
       currentMode = "search";
@@ -243,7 +231,7 @@ async function initializeSearchPage() {
 
   if (assignmentBtn) {
     assignmentBtn.addEventListener("click", async () => {
-      currentQuery = document.getElementById("search-query").value.trim();
+      currentQuery = document.getElementById("search-query").value.trim().toLowerCase();
       currentPageSize = Number(document.getElementById("search-limit").value);
       currentPage = 1;
       currentMode = "assignment";

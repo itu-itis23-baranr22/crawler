@@ -14,7 +14,7 @@ def create_app() -> Flask:
     def home():
         return render_template("index.html")
 
-    @app.route("/search")
+    @app.route("/search-page")
     def search_page():
         return render_template("search.html")
 
@@ -93,25 +93,37 @@ def create_app() -> Flask:
         return jsonify(result), status_code
 
     # ---------- Search API ----------
-    @app.route("/api/search", methods=["GET"])
+    # Spec-compatible endpoint:
+    # GET http://localhost:3600/search?query=<word>&sortBy=relevance
+    @app.route("/search", methods=["GET"])
     def search():
         query = request.args.get("query", "").strip()
+        sort_by = request.args.get("sortBy", "relevance").strip()
         page = request.args.get("page", 1)
         page_size = request.args.get("page_size", 10)
-        result, status_code = search_service.search(query=query, page=page, page_size=page_size)
+
+        result, status_code = search_service.search(
+            query=query,
+            sort_by=sort_by,
+            page=page,
+            page_size=page_size,
+        )
         return jsonify(result), status_code
 
-    @app.route("/api/search/assignment", methods=["GET"])
+    @app.route("/search/assignment", methods=["GET"])
     def search_assignment():
         query = request.args.get("query", "").strip()
         page = request.args.get("page", 1)
         page_size = request.args.get("page_size", 10)
+
         result, status_code = search_service.search_assignment_format(
-            query=query, page=page, page_size=page_size
+            query=query,
+            page=page,
+            page_size=page_size,
         )
         return jsonify(result), status_code
 
-    @app.route("/api/lucky", methods=["GET"])
+    @app.route("/lucky", methods=["GET"])
     def lucky():
         page_size = request.args.get("page_size", 10)
         result, status_code = search_service.lucky(page_size=page_size)
@@ -123,4 +135,4 @@ def create_app() -> Flask:
 app = create_app()
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=3600)
