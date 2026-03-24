@@ -1,27 +1,28 @@
-# Product Requirements Document (PRD)
+# Product Requirements Document
 ## Web Crawler & Search System
 
 ---
 
 ## 1. Overview
 
-This system is a file-based web crawler and search engine that allows users to crawl web pages, build an index, and perform search queries over the collected data.
+A file-based web crawler and search engine that allows users to crawl web pages, build a persistent index, and perform ranked search queries over collected data.
 
-The system consists of two main components:
-- A **Crawler Service** that fetches and indexes web content
-- A **Search Service** that retrieves and ranks results based on a query
+**Two core components:**
 
-The system is designed to simulate a simplified search engine pipeline.
+| Component | Responsibility |
+|---|---|
+| **Crawler Service** | Fetches and indexes web content |
+| **Search Service** | Retrieves and ranks results by query |
 
 ---
 
 ## 2. Objectives
 
-- Enable crawling of web pages starting from a given URL
-- Build a persistent, file-based index of words
+- Crawl web pages starting from a given origin URL
+- Build a persistent, file-based word index
 - Support multiple crawler jobs running concurrently
-- Provide real-time monitoring of crawler status
-- Allow users to search indexed data with ranking
+- Provide real-time crawler monitoring
+- Enable ranked search over indexed data
 
 ---
 
@@ -30,15 +31,14 @@ The system is designed to simulate a simplified search engine pipeline.
 ### In Scope
 - Thread-based crawler jobs
 - File-based indexing system
-- Query-based search
-- Relevance-based ranking
+- Query-based search with relevance ranking
 - Pagination
 - Real-time crawler monitoring (long polling)
 
 ### Out of Scope
 - Distributed crawling
 - Database-backed storage
-- Advanced ranking (TF-IDF, BM25)
+- Advanced ranking algorithms (TF-IDF, BM25)
 - Large-scale production optimizations
 
 ---
@@ -47,52 +47,57 @@ The system is designed to simulate a simplified search engine pipeline.
 
 ### 4.1 Crawler Service
 
-Responsible for:
-- Creating crawler jobs
-- Managing crawler lifecycle:
-  - Start
-  - Pause
-  - Resume
-  - Stop
-  - Restart
-- Fetching web pages
-- Parsing content and extracting links
-- Sending extracted data to indexing layer
+Manages the full lifecycle of crawler jobs:
 
-Each crawler runs as a separate thread.
+```
+Start → Pause → Resume → Stop → Restart
+```
+
+Each crawler runs as an independent thread. Responsibilities:
+- Creating and managing crawler jobs
+- Fetching and parsing web pages
+- Extracting links and text
+- Forwarding extracted data to the indexing layer
 
 ---
 
 ### 4.2 Search Service
 
-Responsible for:
+Responsibilities:
 - Processing user queries
-- Retrieving matching entries from storage
-- Ranking results based on a scoring function
+- Retrieving matching entries from file storage
+- Ranking results via scoring function
 - Returning paginated results
 
 ---
 
 ### 4.3 Storage Layer
 
-File-based storage system:
+File-based storage, bucketed by first letter of each word:
 
-- Located under: data/storage/
+```
+data/storage/
+├── a.data
+├── b.data
+├── c.data
+└── ...
+```
 
-- Bucket files based on first letter: a.data, b.data, c.data, ...
+**Entry format (one per line):**
 
-
-Each line format: word url origin depth frequency
-
+```
+word    url    origin    depth    frequency
+```
 
 ---
 
 ### 4.4 Frontend
 
-Provides:
-- Dashboard for crawler management
-- Dedicated crawler status page
-- Search interface
+| Page | Description |
+|---|---|
+| Dashboard `/` | Crawler management and system stats |
+| Crawler Status `/crawler/<id>` | Per-crawler real-time monitoring |
+| Search `/search-page` | Query interface with ranked results |
 
 ---
 
@@ -100,127 +105,127 @@ Provides:
 
 ### 5.1 Crawler Creation
 
-User must be able to create a crawler with:
-- Origin URL
-- Max Depth
-- Max Pages
-- Hit Rate
-- Queue Limit
+Users create a crawler with the following parameters:
 
-System generates unique crawler ID: [epoch_time]_[thread_id]
+| Parameter | Description |
+|---|---|
+| `origin_url` | Starting URL |
+| `max_depth` | Maximum link depth |
+| `max_pages` | Page crawl limit |
+| `hit_rate` | Pages per second |
+| `queue_limit` | Maximum queue size |
 
+System generates a unique crawler ID:
+
+```
+[epoch_time]_[thread_id]
+```
 
 ---
 
 ### 5.2 Crawling Behavior
 
-- Start from origin URL
-- Fetch page content
-- Extract:
-  - Text
-  - Links
-- Add new URLs to queue
-- Respect:
-  - Max depth
-  - Max pages
-- Avoid revisiting URLs
+1. Start from origin URL
+2. Fetch page content
+3. Extract text and links
+4. Add new URLs to queue
+5. Respect `max_depth` and `max_pages` limits
+6. Avoid revisiting already-crawled URLs
 
 ---
 
 ### 5.3 Indexing
 
-- Tokenize text into words
-- Compute frequency per document
-- Store entries in bucket files
+- Tokenize page text into words
+- Compute per-document word frequency
+- Store entries in the corresponding bucket file
 
-Each entry: word url origin depth frequency
-
-
----
-
-### 5.4 Search
-
-System must support:
-- Query-based search using exact word matching
-- Retrieval from bucket files
-- Ranking of results
+**Entry format:**
+```
+word    url    origin    depth    frequency
+```
 
 ---
 
-### 5.5 Ranking
+### 5.4 Search & Ranking
 
-Relevance score is calculated as: score = (frequency * 10) + 1000 - (depth * 5)
+Supports exact word matching against bucket files. Results are ranked by:
 
+```
+score = (frequency × 10) + 1000 − (depth × 5)
+```
 
-Where:
-- Higher frequency increases score
-- Lower depth increases score
-
----
-
-### 5.6 Pagination
-
-Search results must support:
-- page
-- page_size
-- total_results
-- total_pages
+| Factor | Effect on Score |
+|---|---|
+| Higher frequency | Increases score |
+| Lower depth | Increases score |
 
 ---
 
-### 5.7 Real-Time Monitoring
+### 5.5 Pagination
+
+Search results support the following pagination parameters:
+
+| Parameter | Description |
+|---|---|
+| `page` | Current page number |
+| `page_size` | Results per page |
+| `total_results` | Total matching entries |
+| `total_pages` | Total number of pages |
+
+---
+
+### 5.6 Real-Time Monitoring
 
 - Each crawler has a dedicated status page
-- Uses long polling: /api/crawlers/<id>/wait-status
+- Frontend polls via long polling:
 
-- Updates UI when crawler state changes
+```
+GET /api/crawlers/<id>/wait-status
+```
+
+- Backend holds the request until state changes or timeout occurs
+- UI re-renders on each response
 
 ---
 
-### 5.8 Logging
+### 5.7 Logging
 
-System must:
-- Store crawler logs
-- Provide API to fetch logs
-- Display logs in UI
+- Crawler events are stored as logs
+- Logs are accessible via API
+- Displayed live in the crawler status UI
 
 ---
 
 ## 6. Non-Functional Requirements
 
-### Performance
-- Support multiple concurrent crawler threads
-- Efficient file-based read/write operations
-
-### Reliability
-- Avoid duplicate crawling
-- Persist crawler state
-
-### Scalability (Limited)
-- Designed for small-scale usage
-- Not distributed
-
-### Maintainability
-- Modular architecture:
-- crawler
-- search
-- services
-- storage
+| Category | Requirement |
+|---|---|
+| **Performance** | Support multiple concurrent crawler threads; efficient file I/O |
+| **Reliability** | Avoid duplicate crawling; persist crawler state |
+| **Scalability** | Designed for small-scale usage; not distributed |
+| **Maintainability** | Modular structure: `crawler`, `search`, `services`, `storage` |
 
 ---
 
 ## 7. Data Design
 
-### Crawler Data
-- crawler_id
-- origin
-- status
-- queue_size
-- pages_crawled
-- timestamps
+### Crawler Record
 
-### Index Data
-- word → (url, origin, depth, frequency)
+| Field | Description |
+|---|---|
+| `crawler_id` | Unique identifier |
+| `origin` | Starting URL |
+| `status` | Current lifecycle state |
+| `queue_size` | Current queue depth |
+| `pages_crawled` | Total pages processed |
+| `timestamps` | Created / updated times |
+
+### Index Record
+
+```
+word  →  (url, origin, depth, frequency)
+```
 
 ---
 
@@ -228,54 +233,59 @@ System must:
 
 ### Crawler API
 
-- POST `/api/crawlers`
-- GET `/api/crawlers`
-- GET `/api/crawlers/<id>`
-- GET `/api/crawlers/<id>/wait-status`
-- POST `/api/crawlers/<id>/pause`
-- POST `/api/crawlers/<id>/resume`
-- POST `/api/crawlers/<id>/stop`
-- POST `/api/crawlers/<id>/restart`
-- GET `/api/crawlers/<id>/logs`
-
----
+| Method | Endpoint | Description |
+|---|---|---|
+| `POST` | `/api/crawlers` | Create a new crawler |
+| `GET` | `/api/crawlers` | List all crawlers |
+| `GET` | `/api/crawlers/<id>` | Get crawler status |
+| `GET` | `/api/crawlers/<id>/wait-status` | Long polling |
+| `POST` | `/api/crawlers/<id>/pause` | Pause crawler |
+| `POST` | `/api/crawlers/<id>/resume` | Resume crawler |
+| `POST` | `/api/crawlers/<id>/stop` | Stop crawler |
+| `POST` | `/api/crawlers/<id>/restart` | Restart crawler |
+| `GET` | `/api/crawlers/<id>/logs` | Fetch logs |
 
 ### Search API
 
-- GET `/search?query=<word>&sortBy=relevance`
+| Method | Endpoint | Description |
+|---|---|---|
+| `GET` | `/search` | Query the index |
 
-Example: http://localhost:3600/search?query=python&sortBy=relevance
-
+**Example:**
+```
+GET http://localhost:3600/search?query=python&sortBy=relevance
+```
 
 ---
 
 ## 9. Limitations
 
-- File-based storage is not scalable
-- No distributed crawling
-- No advanced ranking algorithms
+- File-based storage is not horizontally scalable
+- No distributed crawling support
+- No advanced ranking (TF-IDF, BM25)
 - Limited fault tolerance
 
 ---
 
 ## 10. Future Improvements
 
-- Replace file storage with database (NoSQL / key-value)
-- Implement distributed crawler architecture
-- Improve ranking (TF-IDF, BM25)
-- Add fuzzy search
-- Introduce monitoring and alerting
-- Add resource limits (CPU, memory)
-- Implement robots.txt compliance
+| Area | Improvement |
+|---|---|
+| Storage | Replace file storage with NoSQL or key-value database |
+| Crawling | Implement distributed crawler architecture |
+| Ranking | Adopt TF-IDF or BM25 scoring |
+| Search | Add fuzzy / partial matching |
+| Compliance | Implement `robots.txt` support |
+| Observability | Add monitoring, alerting, and resource limits (CPU/memory) |
 
 ---
 
 ## 11. Conclusion
 
-This system demonstrates the core components of a search engine:
+This system demonstrates the three core components of a search engine pipeline:
 
-- Crawling
-- Indexing
-- Searching
+```
+Crawling  →  Indexing  →  Searching
+```
 
-It provides a simplified but functional implementation that highlights system design principles such as concurrency, file-based indexing, and real-time updates.
+It provides a simplified but functional implementation that highlights system design principles: concurrency, file-based indexing, and real-time updates.
