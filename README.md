@@ -4,7 +4,7 @@ A small search engine that runs on your own machine. Give it a starting address 
 
 ![The dashboard during a crawl: a list of crawls, a map of the selected one with a mark for each address, and a legend counting what was indexed, skipped and failed, with the reasons](docs/crawl-map.png)
 
-*A crawl of a small local test site, in progress. The triangle is the starting address, each ring is one more link away, each road is a part of the site, and each mark is one address.*
+*A crawl of the demo site that comes with the app, in progress. The triangle is the starting address, each ring is one more link away, each road is a part of the site, and each mark is one address.*
 
 ## What it does
 
@@ -13,7 +13,7 @@ A small search engine that runs on your own machine. Give it a starting address 
 - **Searches properly.** Several words at once, ranked with BM25, in any language. Capitals and accents don't matter, and Turkish `İ`, `I`, `ı` and `i` count as one letter.
 - **Behaves well on other people's sites.** It obeys robots.txt, `Crawl-delay`, `Retry-After`, `noindex` and `nofollow`, and two jobs on one site share one speed limit.
 
-![Searching for "ISTANBUL bogazi" finds "İstanbul Boğazı", with the matching words marked](docs/search.png)
+![Searching for "imam bayildi" finds the recipe "İmam bayıldı", with the matching words marked](docs/search.png)
 
 *The query has no Turkish letters and the results do.*
 
@@ -29,6 +29,8 @@ python app.py
 ```
 
 Then open <http://127.0.0.1:3600>. The index is kept in `data/crawler.db`. Set `CRAWLER_PORT` or `CRAWLER_DATA_DIR` to change the port or the folder.
+
+To see it work straight away, press **Crawl the demo site** on the first screen. It crawls Kitchen Notes, a small made-up recipe site that the app serves at `/demo/`, so nothing leaves your machine. The crawl takes about ten seconds, and some of the site's links are broken on purpose, so each kind of outcome turns up on the map. Then search for `imam bayildi`.
 
 The app only answers on this machine. Be considerate when crawling sites you don't own, and keep the page limit and hit rate low.
 
@@ -59,6 +61,7 @@ Each stage has one file to read:
 ```
 app.py                   Pages, JSON API, and the checks on who may call it
 config.py                Limits and settings
+demo/                    The demo site at /demo/, built from data, and the robots.txt it needs
 crawler/crawler_job.py   One crawl: the loop above
 crawler/politeness.py    robots.txt and the per-site speed limit
 crawler/fetcher.py       Downloading one address, and saying what happened
@@ -124,7 +127,7 @@ pytest
 ruff check .
 ```
 
-The 370 tests crawl a website that the tests start on this machine, so nothing external is contacted. They include jobs writing at once, a process killed in the middle of a crawl and then resumed, and broken HTML. CI is set up to run them on Linux and Windows with Python 3.10 and 3.13.
+The 383 tests crawl websites that the tests start on this machine, the demo site among them, so nothing external is contacted. They include jobs writing at once, a process killed in the middle of a crawl and then resumed, and broken HTML. CI is set up to run them on Linux and Windows with Python 3.10 and 3.13.
 
 ## Limits
 

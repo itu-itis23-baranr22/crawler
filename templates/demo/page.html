@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ page.title }}</title>
+  {% if page.noindex %}<meta name="robots" content="noindex" />{% endif %}
+  {% if page.canonical %}<link rel="canonical" href="{{ page.canonical }}" />{% endif %}
+  {#- Someone else's website, as far as the crawler is concerned, so it deliberately doesn't share Crawler's look. #}
+  <style>
+    :root {
+      --paper: #faf6ef;
+      --ink: #2d2621;
+      --soft: #6e6259;
+      --spice: #a2401f;
+      --line: #e3d9cb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 18px/1.6 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    }
+    a { color: var(--spice); text-underline-offset: 3px; }
+    .demo-note {
+      margin: 0;
+      padding: 8px 16px;
+      background: var(--ink);
+      color: var(--paper);
+      font: 14px/1.4 system-ui, sans-serif;
+      text-align: center;
+    }
+    .demo-note a { color: inherit; }
+    .masthead, main { max-width: 40rem; margin: 0 auto; padding: 0 16px; }
+    .masthead { padding-top: 28px; }
+    .masthead a {
+      color: var(--spice);
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    main { padding-top: 28px; padding-bottom: 48px; }
+    .trail { margin: 0; color: var(--soft); font-size: 15px; }
+    .trail a { color: inherit; }
+    h1 { margin: 6px 0 0; font-size: 40px; line-height: 1.15; font-weight: 600; }
+    .gloss { margin: 4px 0 0; color: var(--soft); font-size: 20px; font-style: italic; }
+    .lead { margin: 18px 0 0; font-size: 20px; }
+    .facts { margin: 10px 0 0; color: var(--soft); font-size: 15px; letter-spacing: 0.04em; }
+    section { margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--line); }
+    h2 {
+      margin: 0 0 8px;
+      color: var(--spice);
+      font: 700 14px/1.4 system-ui, sans-serif;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    p { margin: 0 0 12px; }
+    ul, ol { margin: 0; padding-left: 1.3em; }
+    li { margin: 4px 0; }
+    .links { padding: 0; list-style: none; }
+    .links li { margin: 8px 0; }
+    .links span { color: var(--soft); }
+  </style>
+</head>
+<body>
+  <div class="demo-note" id="demo-note"></div>
+  <script>
+    // Written by script rather than in the HTML, so it isn't read as part of every recipe:
+    // the crawler reads only the HTML the server sends.
+    (function () {
+      var note = document.getElementById("demo-note");
+      var back = document.createElement("a");
+      back.href = "/";
+      back.rel = "nofollow";
+      back.textContent = "Back to Crawler";
+      note.append("A demo site served by Crawler. " + {{ site_name|tojson }} + " is made up; the dishes are real. ", back);
+    })();
+  </script>
+  {% if page.title != site_name %}<header class="masthead"><a href="{{ home }}">{{ site_name }}</a></header>{% endif %}
+  <main>
+    {% if page.trail %}
+      <p class="trail">{% for href, words in page.trail %}<a href="{{ href }}">{{ words }}</a>{% if not loop.last %} / {% endif %}{% endfor %}</p>
+    {% endif %}
+    <h1>{{ page.title }}</h1>
+    {% if page.gloss %}<p class="gloss">{{ page.gloss }}</p>{% endif %}
+    {% if page.lead %}<p class="lead">{{ page.lead }}</p>{% endif %}
+    {% if page.facts %}<p class="facts">{{ page.facts }}</p>{% endif %}
+    {% for block in page.blocks %}
+      <section>
+        {% if block.heading %}<h2>{{ block.heading }}</h2>{% endif %}
+        {% for paragraph in block.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+        {% if block.items %}<ul>{% for item in block.items %}<li>{{ item }}</li>{% endfor %}</ul>{% endif %}
+        {% if block.steps %}<ol>{% for step in block.steps %}<li>{{ step }}</li>{% endfor %}</ol>{% endif %}
+        {% if block.links %}
+          <ul class="links">
+            {% for href, words, note in block.links %}
+              <li><a href="{{ href }}">{{ words }}</a>{% if note %} <span>· {{ note }}</span>{% endif %}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </section>
+    {% endfor %}
+  </main>
+</body>
+</html>

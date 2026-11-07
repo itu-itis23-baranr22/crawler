@@ -144,7 +144,7 @@ The palette comes from a topographic sheet: deep water, map white, woodland tint
 - **Deeper Water** (`water-deep`): primary button hover and the map tip.
 
 ### Secondary
-- **Depth Tints** (`depth-0` to `depth-3`): one tint per link depth, darkest at the start and palest from depth 3 outward. The same tint marks a depth on the map, in the address list and in search results.
+- **Depth Tints** (`depth-0` to `depth-3`): one tint per link depth, darkest at the start and palest from depth 3 outward. The same tint marks a depth on the map, in the address list and in search results. Depth chips also carry a one-pixel `rule` edge, because the palest tint is close to the ground.
 - **Survey Pin** (`pin`): the brand triangle and the current page's underline in the shell, and nowhere else.
 
 ### Tertiary
@@ -232,13 +232,17 @@ Small, square corners: 4px on controls and the tip, 2px on depth chips and highl
 A full-width button with host, status, a 6px bar split by outcome, and a line of counts. The selected row turns white and gains a small triangle.
 
 ### The Crawl Map (signature)
-An SVG sheet. The triangle is the starting address, each ring is one more link away, and a hairline road runs out to each of the largest parts of the site, ending where that part's marks end, with its name on the sheet beside the end. Names sit under the marks so they never hide an address. Roads are laid in the order parts first appear, and a mark's place follows from its road, address and depth, so a placed mark never moves, and a crawl draws the same way wherever it is opened. Text and marks are counter-scaled so they keep their size on a phone. A new mark lands with a 200ms fade and scale, which is the only motion here, and it is removed under reduced motion. Selecting a mark rings it, shows its record beside the map, and finds its row in the list. Selecting a row does the reverse.
+An SVG sheet. The triangle is the starting address, each ring is one more link away, and a hairline road runs out to each of the largest parts of the site, ending where that part's marks end, with its name beside the end in the nearest spot clear of marks, other roads and other names. Where a crawl is too dense for a clear spot, the name takes the one that covers the fewest marks, and names sit under the marks so they never hide an address. A name keeps its spot while that spot stays as good, so names don't jump about as a crawl runs. Roads are laid in the order parts first appear, and a mark's place follows from its road, address and depth, so a placed mark never moves, and a crawl draws the same way wherever it is opened. Text and marks are counter-scaled so they keep their size on a phone. A new mark lands with a 200ms fade and scale, which is the only motion here, and it is removed under reduced motion. Selecting a mark rings it, shows its record beside the map, and finds its row in the list. Selecting a row does the reverse.
 
 ### Legend
 Ruled rows with a mark, a label and a count, with reasons listed under Skipped and Failed. Each row also acts as a filter.
 
 ### Address List
 One row per address, with its mark, address, depth chip and result. While a crawl runs the newest come first, and once it stops, problems come first. A selected row shows its record in place.
+
+### First Run
+
+With no crawls yet, the crawl area explains how to start one beside an empty map, and offers **Crawl the demo site** as its one primary button. The demo site at `/demo/` deliberately doesn't use this design. It stands in for someone else's website, so it has a plain look of its own: a warm page, serif text and a single spice colour.
 
 ## Do's and Don'ts
 

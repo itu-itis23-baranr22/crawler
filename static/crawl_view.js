@@ -17,6 +17,7 @@ const MAX_RINGS = 8;
 const MAX_MARKS = 3000; // matches MAX_VISITS_SHOWN on the server
 const PICK_DISTANCE = 16;
 const LABEL_COUNT = 6;
+const LABEL_GAP = 60; // how far, in screen pixels, a name may sit from the end of its road
 const FIRST_ROAD = -Math.PI / 3;
 const ROAD_STEP = Math.PI * (3 - Math.sqrt(5)); // the golden angle spreads any number of roads evenly
 const ROAD_SPREAD = (34 / 180) * Math.PI;
@@ -58,6 +59,38 @@ function svgNode(tag, attributes = {}, parent = null) {
   for (const [name, value] of Object.entries(attributes)) node.setAttribute(name, value);
   if (parent) parent.append(node);
   return node;
+}
+
+function clamp(value, low, high) {
+  return Math.min(high, Math.max(low, value));
+}
+
+function boxesMeet(a, b) {
+  return a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top;
+}
+
+// Whether a straight road passes through a box.
+function segmentMeetsBox({ x1, y1, x2, y2 }, box) {
+  let enter = 0;
+  let leave = 1;
+  const dx = x2 - x1;
+  const dy = y2 - y1;
+  for (const [step, room] of [
+    [-dx, x1 - box.left],
+    [dx, box.right - x1],
+    [-dy, y1 - box.top],
+    [dy, box.bottom - y1],
+  ]) {
+    if (step === 0) {
+      if (room < 0) return false;
+    } else if (step < 0) {
+      enter = Math.max(enter, room / step);
+    } else {
+      leave = Math.min(leave, room / step);
+    }
+    if (enter > leave) return false;
+  }
+  return true;
 }
 
 function markIcon(outcome) {
@@ -304,57 +337,54 @@ class CrawlMap {
       .filter((road) => size(road) >= 2)
       .sort((a, b) => size(b) - size(a) || a.angle - b.angle)
       .slice(0, LABEL_COUNT);
+    const marks = this.markGrid();
+    const lines = new Map(largest.map((road) => [road, this.roadLine(road)]));
     const taken = [];
-    const overlaps = (box) => taken.some((other) => box.left < other.right && box.right > other.left && box.top < other.bottom && box.bottom > other.top);
+    const overlaps = (box) => taken.some((other) => boxesMeet(box, other));
     for (const road of largest) {
-      const cos = Math.cos(road.angle);
-      const sin = Math.sin(road.angle);
-      const reach = this.ringRadius(Math.min(road.deepest, this.rings - 1)) - 8;
-      const text = road.name.length > 13 ? `${road.name.slice(0, 12)}…` : road.name;
-      const anchor = cos > 0.3 ? "end" : cos < -0.3 ? "start" : "middle";
-      const width = text.length * 7.4 * this.unit;
-      const height = 17 * this.unit;
-      // A name goes at the end of its road, or as near as it can without touching another name.
-      let placed = null;
-      for (let step = 0; step < 5 && !placed; step += 1) {
-        const radius = reach - (6 + step * 20) * this.unit;
-        if (radius < START_RADIUS + 16) break;
-        const x = MAP_CENTRE + radius * cos;
-        const y = MAP_CENTRE + radius * sin + 4 * this.unit;
-        const left = anchor === "end" ? x - width : anchor === "start" ? x : x - width / 2;
-        const box = { left, right: left + width, top: y - height * 0.8, bottom: y + height * 0.2 };
-        if (!overlaps(box)) placed = { x, y, box };
+      const line = lines.get(road);
+      const label = svgNode("text", { class: "map-label" }, this.labelLayer);
+      label.textContent = road.name.length > 13 ? `${road.name.slice(0, 12)}…` : road.name;
+      let width = 0;
+      try {
+        width = label.getComputedTextLength();
+      } catch {
+        // not laid out yet: the estimate below stands in
       }
-      if (!placed) continue; // no room: the caption counts it among the unlabelled parts
+      if (!width) width = label.textContent.length * 7.4 * this.unit;
+      const others = [...lines.values()].filter((other) => other !== line);
+      const placed = this.placeLabel(road, line, width, { marks, others, overlaps });
+      if (!placed) {
+        label.remove(); // no room: the caption counts it among the unlabelled parts
+        road.label = null;
+        continue;
+      }
+      road.label = placed;
       taken.push(placed.box);
-      svgNode(
-        "line",
-        {
-          class: "map-road",
-          // Both ends stop short of the rings, which wobble, so a road never pokes through one.
-          x1: (MAP_CENTRE + (START_RADIUS + 8) * cos).toFixed(1),
-          y1: (MAP_CENTRE + (START_RADIUS + 8) * sin).toFixed(1),
-          x2: (MAP_CENTRE + reach * cos).toFixed(1),
-          y2: (MAP_CENTRE + reach * sin).toFixed(1),
-        },
-        this.roadLayer
-      );
-      const label = svgNode("text", { class: "map-label", x: placed.x.toFixed(1), y: placed.y.toFixed(1), "text-anchor": anchor }, this.labelLayer);
-      label.textContent = text;
+      svgNode("line", { class: "map-road", ...Object.fromEntries(Object.entries(line).map(([key, value]) => [key, value.toFixed(1)])) }, this.roadLayer);
+      label.setAttribute("x", placed.x.toFixed(1));
+      label.setAttribute("y", placed.y.toFixed(1));
+      label.setAttribute("text-anchor", placed.anchor);
     }
     this.labelledRoads = taken.length;
 
-    // Depth numerals step along their ring if a place name is in the way.
+    // Depth numerals step along their ring if a place name or a mark is in the way.
     for (let ring = 1; ring < this.rings; ring += 1) {
       const radius = this.ringRadius(ring);
       let bearing = DEPTH_BEARING;
-      for (let tries = 0; tries < 8; tries += 1) {
+      let fallback = null;
+      for (let tries = 0; tries < 12; tries += 1, bearing += 0.2) {
         const x = MAP_CENTRE + radius * Math.cos(bearing);
         const y = MAP_CENTRE + radius * Math.sin(bearing);
-        const box = { left: x - 12 * this.unit, right: x + 12 * this.unit, top: y - 10 * this.unit, bottom: y + 10 * this.unit };
-        if (!overlaps(box)) break;
-        bearing += 0.25;
+        const box = { left: x - 10 * this.unit, right: x + 10 * this.unit, top: y - 9 * this.unit, bottom: y + 9 * this.unit };
+        if (overlaps(box)) continue;
+        if (fallback === null) fallback = bearing;
+        if (!marks.count(box, 0)) {
+          fallback = bearing;
+          break;
+        }
       }
+      bearing = fallback ?? DEPTH_BEARING;
       const label = svgNode(
         "text",
         {
@@ -367,6 +397,88 @@ class CrawlMap {
       );
       label.textContent = this.maxDepth + 1 > MAX_RINGS && ring === this.rings - 1 ? `${ring}+` : ring;
     }
+  }
+
+  // A road runs from just outside the start to where its part's marks end. Both ends stop short of
+  // the rings, which wobble, so a road never pokes through one.
+  roadLine(road) {
+    const cos = Math.cos(road.angle);
+    const sin = Math.sin(road.angle);
+    const reach = this.ringRadius(Math.min(road.deepest, this.rings - 1)) - 8;
+    return {
+      x1: MAP_CENTRE + (START_RADIUS + 8) * cos,
+      y1: MAP_CENTRE + (START_RADIUS + 8) * sin,
+      x2: MAP_CENTRE + reach * cos,
+      y2: MAP_CENTRE + reach * sin,
+    };
+  }
+
+  // Every mark on the sheet, sorted into squares so a name can ask what lies under it.
+  markGrid() {
+    const cell = 24;
+    const columns = Math.ceil(MAP_SIZE / cell) + 1;
+    const squares = new Map();
+    const square = (x, y) => Math.max(0, Math.floor(x / cell)) * columns + Math.max(0, Math.floor(y / cell));
+    for (const record of [...this.records.values(), ...this.waiting]) {
+      const key = square(record.x, record.y);
+      if (!squares.has(key)) squares.set(key, []);
+      squares.get(key).push(record);
+    }
+    return {
+      count(box, pad) {
+        let count = 0;
+        const left = box.left - pad;
+        const right = box.right + pad;
+        const top = box.top - pad;
+        const bottom = box.bottom + pad;
+        for (let column = Math.max(0, Math.floor(left / cell)); column <= Math.floor(right / cell); column += 1) {
+          for (let row = Math.max(0, Math.floor(top / cell)); row <= Math.floor(bottom / cell); row += 1) {
+            for (const record of squares.get(column * columns + row) || []) {
+              if (record.x >= left && record.x <= right && record.y >= top && record.y <= bottom) count += 1;
+            }
+          }
+        }
+        return count;
+      },
+    };
+  }
+
+  // A name goes beside the end of its road, in the nearest spot that is clear of marks, other roads
+  // and other names. Where a crawl is too dense for that, it takes the spot that covers the fewest
+  // marks, and it stays where it was while that spot is still as good, so names don't jump as marks arrive.
+  placeLabel(road, line, width, { marks, others, overlaps }) {
+    const unit = this.unit;
+    const height = 17 * unit;
+    const cos = Math.cos(road.angle);
+    const sin = Math.sin(road.angle);
+    const low = MAP_INSET + 2 * unit;
+    const high = MAP_SIZE - MAP_INSET - 2 * unit;
+    let best = null;
+    const consider = (x, y, anchor, bonus) => {
+      // Italic letters lean past the ends of the text, so the box takes a little room on each side.
+      const left = (anchor === "end" ? x - width : anchor === "start" ? x : x - width / 2) - 2 * unit;
+      const box = { left, right: left + width + 4 * unit, top: y - height * 0.8, bottom: y + height * 0.2 };
+      if (box.left < low || box.right > high || box.top < low || box.bottom > high || overlaps(box)) return;
+      const nearestX = clamp(MAP_CENTRE, box.left, box.right);
+      const nearestY = clamp(MAP_CENTRE, box.top, box.bottom);
+      if (Math.hypot(nearestX - MAP_CENTRE, nearestY - MAP_CENTRE) < START_RADIUS + 4) return;
+      const gap = Math.hypot(line.x2 - clamp(line.x2, box.left, box.right), line.y2 - clamp(line.y2, box.top, box.bottom)) / unit;
+      if (gap > LABEL_GAP) return;
+      const off = Math.hypot(line.x2 - (box.left + box.right) / 2, line.y2 - (box.top + box.bottom) / 2) / unit;
+      const covered = marks.count(box, 4 * unit);
+      const crossed = others.filter((other) => segmentMeetsBox(other, box)).length;
+      const score = covered * 40 + crossed * 20 + gap + off / 20 - bonus;
+      if (!best || score < best.score) best = { x, y, anchor, box, score };
+    };
+    if (road.label) consider(road.label.x, road.label.y, road.label.anchor, 6);
+    for (let along = -90; along <= 60; along += 5) {
+      for (const across of [0, -9, 9, -18, 18, -27, 27]) {
+        const x = line.x2 + (along * cos - across * sin) * unit;
+        const y = line.y2 + (along * sin + across * cos + 4) * unit;
+        for (const anchor of ["start", "middle", "end"]) consider(x, y, anchor, 0);
+      }
+    }
+    return best;
   }
 
   // Parts of the site with no name on the map, so nothing looks as if it belongs to a nearby label.
@@ -673,8 +785,12 @@ class CrawlView {
     this.renderCount();
   }
 
+  // What the crawl itself needs comes first, and a missing address never hides it.
   noteFor(status) {
-    if (this.infoNote) return this.infoNote;
+    return [this.statusNote(status), this.infoNote].filter(Boolean).join(" ");
+  }
+
+  statusNote(status) {
     if (status.status === "interrupted") return "The app closed while this crawl was running. Finished pages are safe, and Resume continues from where it stopped.";
     if (status.status === "failed") return "Something unexpected stopped this crawl. The log says what happened, and Restart tries again.";
     if (status.status === "completed" && !status.pages_crawled) return "This crawl finished without indexing anything. The reasons are listed beside the map.";

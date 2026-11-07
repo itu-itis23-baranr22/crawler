@@ -85,5 +85,15 @@ Restart crawls again from the start. Pages found again are updated in place.
 | `/` | Start crawls, see them all, and watch the selected one on its map. The address holds the selection |
 | `/crawler/<id>` | One crawl with its full log, updated live using long polling |
 | `/search-page` | Search. The address holds the query, page and options, so results can be reloaded or shared |
+| `/demo/` | Kitchen Notes, a small made-up recipe site for trying a crawl. See below |
 
 The API is listed in the [README](README.md#api).
+
+## Demo site
+
+So a crawl can be tried at once, without choosing a real website, the app serves a small recipe site at `/demo/`. With no crawls yet, the dashboard offers **Crawl the demo site**. It fills in the form (the demo address at 127.0.0.1, depth 3, 200 pages, 8 per second) and starts the crawl, which takes about ten seconds.
+
+- The site is built from data in `demo/content.py`, so it is the same on every run: about 80 pages in seven recipe sections, with ingredients, techniques and a journal.
+- Some addresses are broken on purpose, so the crawl meets one of each outcome: a removed recipe (404), a members-only page (403), an old address that redirects, two drafts kept out by the app's `/robots.txt`, a post marked noindex, a printable copy naming its recipe as canonical, an archive that repeats the journal, and a shopping list served as plain text.
+- No demo page links outside `/demo/`, so the crawl never wanders into the app itself. The note at the top of each page is written by script, so it isn't indexed as part of every recipe.
+- Dish names are Turkish, so searching `imam bayildi` finds "İmam bayıldı".

@@ -469,7 +469,7 @@
       "kind": "custom",
       "description": "One address, with its mark, depth chip and result.",
       "html": "<button class=\"ds-visit\"><svg width=\"16\" height=\"16\" viewBox=\"-5 -5 10 10\" aria-hidden=\"true\"><path d=\"M-3-3L3 3M3-3L-3 3\" fill=\"none\" stroke=\"var(--road)\" stroke-width=\"1.9\"/></svg><span>/gone</span><span class=\"ds-chip\">depth 1</span><span class=\"ds-why\">Failed: HTTP 404</span></button>",
-      "css": ".ds-visit { display: grid; grid-template-columns: 18px 1fr 72px 40%; align-items: center; gap: 8px; width: 100%; padding: 6px; border: 0; border-top: 1px solid var(--rule); background: none; color: var(--ink); font: 400 14px var(--font); text-align: left; cursor: pointer; } .ds-visit:hover { background: var(--ground-soft); } .ds-chip { justify-self: start; padding: 0 6px; border-radius: 2px; background: var(--depth-1); font-size: 13px; } .ds-why { color: var(--road-text); font-size: 13px; }"
+      "css": ".ds-visit { display: grid; grid-template-columns: 18px 1fr 72px 40%; align-items: center; gap: 8px; width: 100%; padding: 6px; border: 0; border-top: 1px solid var(--rule); background: none; color: var(--ink); font: 400 14px var(--font); text-align: left; cursor: pointer; } .ds-visit:hover { background: var(--ground-soft); } .ds-chip { justify-self: start; padding: 0 6px; border-radius: 2px; background: var(--depth-1); box-shadow: inset 0 0 0 1px var(--rule); font-size: 13px; } .ds-why { color: var(--road-text); font-size: 13px; }"
     },
     {
       "name": "Legend Row",

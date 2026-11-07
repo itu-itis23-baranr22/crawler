@@ -90,9 +90,14 @@ function showFirstRun() {
   if (crawlDetail.querySelector(".first-run")) return;
   const box = element("div", "first-run");
   const words = element("div");
+  const demo = element("button", "btn btn-primary first-run-demo", "Crawl the demo site");
+  demo.type = "button";
+  demo.addEventListener("click", startDemo);
   words.append(
     element("h2", "", "Start your first crawl"),
     element("p", "", "Enter a starting address above and press Start crawl. Each address the crawler reaches appears here on a map, with the reason it was indexed, skipped or failed."),
+    element("p", "", "To see it work first, crawl the demo site that comes with the app: a small recipe site served from this computer, with a few broken links and blocked pages on purpose."),
+    demo,
     element("p", "", "Pages can be searched as soon as they are indexed. If the app closes during a crawl, finished pages are safe and the crawl can be resumed."),
     element("p", "", "On sites you don't own, keep the page limit and the speed low.")
   );
@@ -101,6 +106,17 @@ function showFirstRun() {
   map.node.setAttribute("aria-label", "An empty crawl map");
   box.append(words, map.node);
   crawlDetail.replaceChildren(box);
+}
+
+// The demo site is served by this app. The crawler asks for it at 127.0.0.1, where the app listens,
+// even if this page was opened as localhost. The form is filled in so it shows what was asked for.
+function startDemo() {
+  const port = window.location.port ? `:${window.location.port}` : "";
+  crawlerForm.origin.value = `http://127.0.0.1${port}/demo/`;
+  crawlerForm.max_depth.value = "3";
+  crawlerForm.max_pages.value = "200";
+  crawlerForm.hit_rate.value = "8";
+  crawlerForm.requestSubmit();
 }
 
 function selectCrawler(id, { reveal = false } = {}) {

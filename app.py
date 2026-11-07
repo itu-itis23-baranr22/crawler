@@ -6,6 +6,7 @@ from urllib.parse import urlsplit
 from flask import Flask, jsonify, render_template, request
 
 import config
+import demo
 from crawler.crawler_manager import crawler_manager
 from services.crawler_service import crawler_service
 from services.search_service import search_service
@@ -141,6 +142,9 @@ def create_app() -> Flask:
     def stats():
         result, status_code = search_service.stats()
         return jsonify(result), status_code
+
+    # A small recipe site at /demo/, so a crawl can be tried without leaving this machine.
+    demo.register(app)
 
     return app
 

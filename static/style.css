@@ -417,6 +417,10 @@ input::placeholder {
   color: var(--ink-soft);
 }
 
+.first-run-demo {
+  margin: 2px 0 18px;
+}
+
 .first-run svg {
   display: block;
   width: 100%;
@@ -801,6 +805,8 @@ svg[data-filter="waiting"] .m-waiting {
   justify-self: start;
   padding: 0 6px;
   border-radius: 2px;
+  /* The palest tints are close to the ground, so a hairline keeps every chip visible. */
+  box-shadow: inset 0 0 0 1px var(--rule);
   color: var(--ink);
   font-size: 13px;
   font-variant-numeric: tabular-nums;
