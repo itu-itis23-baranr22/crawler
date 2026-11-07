@@ -1,283 +1,356 @@
-let currentQuery = "";
-let currentPage = 1;
-let currentPageSize = 10;
-let currentMode = "search"; // search | assignment | lucky
+"use strict";
 
-function escapeHtml(text) {
-  const div = document.createElement("div");
-  div.textContent = text ?? "";
-  return div.innerHTML;
+const PAGE_SIZES = [10, 25, 50, 100];
+const DEFAULT_PAGE_SIZE = 10;
+const LOADING_DELAY_MS = 150; // most searches finish sooner, and a flash of loading looks like a glitch
+
+const form = document.getElementById("search-form");
+const queryInput = document.getElementById("search-query");
+const sortSelect = document.getElementById("search-sort");
+const sizeSelect = document.getElementById("search-size");
+const luckyButton = document.getElementById("lucky-btn");
+const panel = document.getElementById("search-panel");
+const summary = document.getElementById("results-summary");
+const resultsArea = document.getElementById("results-area");
+const pagination = document.getElementById("pagination");
+const prevButton = document.getElementById("prev-page-btn");
+const nextButton = document.getElementById("next-page-btn");
+const pageLabel = document.getElementById("page-label");
+
+const state = { query: "", sort: "relevance", size: DEFAULT_PAGE_SIZE, page: 1 };
+let luckyWord = null;
+let currentRequest = null;
+let loadingTimer = null;
+
+// ---------- Address bar ----------
+function readUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const size = Number(params.get("size"));
+  const page = Number(params.get("page"));
+  state.query = (params.get("q") || "").trim();
+  state.sort = params.get("sort") === "depth" ? "depth" : "relevance";
+  state.size = PAGE_SIZES.includes(size) ? size : DEFAULT_PAGE_SIZE;
+  state.page = Number.isInteger(page) && page > 0 ? page : 1;
 }
 
-function showAlert(message) {
-  alert(message);
+function urlForState() {
+  const params = new URLSearchParams();
+  if (state.query) params.set("q", state.query);
+  if (state.sort !== "relevance") params.set("sort", state.sort);
+  if (state.size !== DEFAULT_PAGE_SIZE) params.set("size", String(state.size));
+  if (state.page > 1) params.set("page", String(state.page));
+  const text = params.toString();
+  return text ? `${window.location.pathname}?${text}` : window.location.pathname;
 }
 
-function setSearchStatus(text, className = "green") {
-  const el = document.getElementById("search-status");
-  const summary = document.getElementById("summary-status");
-
-  if (el) {
-    el.textContent = text;
-    el.className = `badge ${className}`;
+function rememberState() {
+  const url = urlForState();
+  if (url !== window.location.pathname + window.location.search) {
+    window.history.pushState(null, "", url);
   }
-
-  if (summary) {
-    summary.textContent = text;
-  }
 }
 
-function updateTopStats(results) {
-  const countEl = document.getElementById("stat-result-count");
-  const depthEl = document.getElementById("stat-top-depth");
-  const freqEl = document.getElementById("stat-top-frequency");
-  const scoreEl = document.getElementById("stat-top-score");
-
-  const count = results.length;
-  countEl.textContent = String(count);
-
-  if (count === 0) {
-    depthEl.textContent = "-";
-    freqEl.textContent = "-";
-    scoreEl.textContent = "-";
-    return;
-  }
-
-  const top = results[0];
-  depthEl.textContent = String(top.depth ?? "-");
-  freqEl.textContent = String(top.frequency ?? "-");
-  scoreEl.textContent = String(top.relevance_score ?? "-");
+function syncForm() {
+  queryInput.value = state.query;
+  sortSelect.value = state.sort;
+  sizeSelect.value = String(state.size);
 }
 
-function updatePagination(payload) {
-  const label = document.getElementById("pagination-label");
-  const prevBtn = document.getElementById("prev-page-btn");
-  const nextBtn = document.getElementById("next-page-btn");
-
-  if (!label || !prevBtn || !nextBtn) return;
-
-  const page = payload.page ?? 1;
-  const totalPages = payload.total_pages ?? 1;
-
-  label.textContent = `Page ${page} of ${totalPages} • Total results: ${payload.total_results ?? 0}`;
-  prevBtn.disabled = !payload.has_prev;
-  nextBtn.disabled = !payload.has_next;
+// ---------- Talking to the server ----------
+function beginRequest() {
+  if (currentRequest) currentRequest.abort();
+  currentRequest = new AbortController();
+  clearTimeout(loadingTimer);
+  loadingTimer = setTimeout(showLoading, LOADING_DELAY_MS);
+  return currentRequest;
 }
 
-function buildResultCard(result) {
-  return `
-    <div class="result-card" style="margin-bottom: 14px;">
-      <div class="row" style="align-items: flex-start;">
-        <div style="flex: 1;">
-          <h3 style="margin-bottom: 8px;">${escapeHtml(result.url || "No URL")}</h3>
-          <div class="url-text" style="margin-bottom: 8px;">
-            Origin: ${escapeHtml(result.origin || "-")}
-          </div>
-
-          <div class="tag-row">
-            <span class="tag">Depth: ${escapeHtml(String(result.depth ?? 0))}</span>
-            <span class="tag">Frequency: ${escapeHtml(String(result.frequency ?? 0))}</span>
-            <span class="tag">Relevance: ${escapeHtml(String(result.relevance_score ?? 0))}</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  `;
+function endLoading() {
+  clearTimeout(loadingTimer);
+  resultsArea.removeAttribute("aria-busy");
 }
 
-function renderNormalResults(payload) {
-  const resultsEl = document.getElementById("search-results");
-  const resultLabel = document.getElementById("result-label");
-  const summaryQuery = document.getElementById("summary-query");
-  const summaryCount = document.getElementById("summary-count");
-  const summaryLucky = document.getElementById("summary-lucky");
-
-  const results = payload.results || [];
-
-  summaryQuery.textContent = payload.query || "-";
-  summaryCount.textContent = String(payload.total_results ?? payload.count ?? 0);
-  summaryLucky.textContent = payload.term || "-";
-  resultLabel.textContent = `${results.length} results on this page`;
-
-  updateTopStats(results);
-  updatePagination(payload);
-
-  if (results.length === 0) {
-    resultsEl.innerHTML = `<div class="result-card">No results found.</div>`;
-    return;
-  }
-
-  resultsEl.innerHTML = results.map(buildResultCard).join("");
+// ---------- Small pieces ----------
+function setSummary(...parts) {
+  summary.replaceChildren(...parts);
 }
 
-function renderAssignmentResults(payload) {
-  const el = document.getElementById("assignment-results");
-  const results = payload.results || [];
+function hidePagination() {
+  pagination.hidden = true;
+}
 
-  updatePagination(payload);
+// ---------- States ----------
+function showState({ title, text, action, alert = false }) {
+  const box = element("div", "search-state");
+  if (alert) box.setAttribute("role", "alert");
+  box.append(element("h2", "", title), element("p", "", text));
+  if (action) box.append(action);
+  resultsArea.replaceChildren(box);
+  hidePagination();
+}
 
-  if (results.length === 0) {
-    el.textContent = "No assignment-format results found.";
-    return;
-  }
+function dashboardLink() {
+  const link = element("a", "btn btn-primary", "Start a crawl");
+  link.href = "/";
+  return link;
+}
 
-  const lines = results.map(item => {
-    const url = item[0] ?? "";
-    const origin = item[1] ?? "";
-    const depth = item[2] ?? 0;
-    return `(${url}, ${origin}, ${depth})`;
+function showNothingIndexed() {
+  setSummary();
+  showState({
+    title: "Nothing to search yet",
+    text: "Start a crawl from the dashboard. Pages can be searched as soon as they are indexed.",
+    action: dashboardLink(),
   });
-
-  el.textContent = lines.join("\n");
 }
 
-async function performSearch(query, page, pageSize) {
-  setSearchStatus("Searching...", "blue");
-
-  const response = await fetch(
-    `/search?query=${encodeURIComponent(query)}&sortBy=relevance&page=${encodeURIComponent(page)}&page_size=${encodeURIComponent(pageSize)}`
-  );
-  const data = await response.json();
-
-  renderNormalResults(data);
-  setSearchStatus("Ready", "green");
+function showLoading() {
+  resultsArea.setAttribute("aria-busy", "true");
+  if (resultsArea.querySelector(".result")) return; // keep the old results, dimmed, until the new ones arrive
+  setSummary("Searching…");
+  hidePagination();
+  const skeleton = element("div", "skeleton");
+  skeleton.setAttribute("aria-hidden", "true");
+  for (let n = 0; n < 3; n += 1) {
+    const row = element("div", "skeleton-result");
+    row.append(element("div", "skeleton-line skeleton-title"), element("div", "skeleton-line"), element("div", "skeleton-line skeleton-short"));
+    skeleton.append(row);
+  }
+  resultsArea.replaceChildren(skeleton);
 }
 
-async function performLucky(pageSize) {
-  setSearchStatus("Lucky...", "blue");
+function showError(message) {
+  setSummary();
+  const retry = element("button", "btn btn-secondary", "Try again");
+  retry.type = "button";
+  retry.addEventListener("click", () => runSearch());
+  showState({ title: "Search did not work", text: message, action: retry, alert: true });
+}
 
-  const response = await fetch(
-    `/lucky?page_size=${encodeURIComponent(pageSize)}`
-  );
-  const data = await response.json();
+async function showStart(signal) {
+  setSummary();
+  hidePagination();
+  const stats = await getJson("/api/stats", signal);
+  if (!stats.indexed_documents) {
+    showNothingIndexed();
+    return;
+  }
+  showState({
+    title: "What are you looking for?",
+    text: `${plural(stats.indexed_documents, "page")} and ${plural(stats.unique_terms, "different word")} are ready to search. Capitals and accents don't matter, so "turkiye" finds "Türkiye".`,
+  });
+}
 
-  renderNormalResults(data);
+async function showNoResults(signal) {
+  const stats = await getJson("/api/stats", signal).catch((error) => {
+    if (error.name === "AbortError") throw error;
+    return null;
+  });
+  if (stats && !stats.indexed_documents) {
+    showNothingIndexed();
+    return;
+  }
+  setSummary("0 results");
+  showState({
+    title: `No pages contain "${state.query}"`,
+    text: "Check the spelling or try fewer words. Only pages you have crawled are searched, so a new crawl may find it.",
+  });
+}
 
-  if (data.message) {
-    showAlert(data.message);
+// ---------- Results ----------
+function appendHighlighted(parent, text, highlights) {
+  // The server counts characters. JavaScript strings count UTF-16 units, which differ after an emoji.
+  const characters = Array.from(text);
+  let position = 0;
+  for (const [start, end] of highlights) {
+    if (start < position || end > characters.length) continue;
+    parent.append(characters.slice(position, start).join(""));
+    parent.append(element("mark", "", characters.slice(start, end).join("")));
+    position = end;
+  }
+  parent.append(characters.slice(position).join(""));
+}
+
+function buildResult(result) {
+  const item = element("li", "result");
+  const heading = element("h2", "result-title");
+  const titleText = result.title || readableUrl(result.url);
+  const href = safeLink(result.url);
+  if (href) {
+    const link = element("a", "", titleText);
+    link.href = href;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    heading.append(link);
+  } else {
+    heading.textContent = titleText;
+  }
+  item.append(heading);
+
+  const address = element("div", "result-url", readableUrl(result.url));
+  address.title = result.url;
+  item.append(address);
+
+  if (result.snippet) {
+    const snippet = element("p", "result-snippet");
+    appendHighlighted(snippet, result.snippet, result.highlights || []);
+    item.append(snippet);
   }
 
-  setSearchStatus("Ready", "green");
-}
-
-async function performAssignmentSearch(query, page, pageSize) {
-  setSearchStatus("Formatting...", "blue");
-
-  const response = await fetch(
-    `/search/assignment?query=${encodeURIComponent(query)}&page=${encodeURIComponent(page)}&page_size=${encodeURIComponent(pageSize)}`
-  );
-  const data = await response.json();
-
-  renderAssignmentResults(data);
-  setSearchStatus("Ready", "green");
-}
-
-async function rerunCurrentMode() {
-  if (currentMode === "search") {
-    await performSearch(currentQuery, currentPage, currentPageSize);
-  } else if (currentMode === "assignment") {
-    await performAssignmentSearch(currentQuery, currentPage, currentPageSize);
-  } else if (currentMode === "lucky") {
-    await performLucky(currentPageSize);
-  }
-}
-
-async function initializeSearchPage() {
-  const form = document.getElementById("search-form");
-  const luckyBtn = document.getElementById("lucky-btn");
-  const assignmentBtn = document.getElementById("assignment-btn");
-  const prevBtn = document.getElementById("prev-page-btn");
-  const nextBtn = document.getElementById("next-page-btn");
-
-  if (form) {
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-
-      currentQuery = document.getElementById("search-query").value.trim().toLowerCase();
-      currentPageSize = Number(document.getElementById("search-limit").value);
-      currentPage = 1;
-      currentMode = "search";
-
-      if (!currentQuery) {
-        showAlert("Please enter a query.");
-        return;
-      }
-
-      try {
-        await performSearch(currentQuery, currentPage, currentPageSize);
-      } catch (error) {
-        console.error(error);
-        setSearchStatus("Error", "red");
-        showAlert("Search request failed.");
-      }
+  if (result.missing_terms && result.missing_terms.length) {
+    const missing = element("p", "result-missing", "Missing: ");
+    result.missing_terms.forEach((term, index) => {
+      if (index) missing.append(", ");
+      missing.append(element("s", "", term));
     });
+    item.append(missing);
   }
 
-  if (luckyBtn) {
-    luckyBtn.addEventListener("click", async () => {
-      currentPageSize = Number(document.getElementById("search-limit").value);
-      currentPage = 1;
-      currentMode = "lucky";
+  const meta = element("div", "result-meta");
+  const depth = element("span", "depth-chip", `Depth ${result.depth}`);
+  depth.style.background = depthTint(result.depth);
+  meta.append(depth, element("span", "", `Found ${plural(result.frequency, "time")}`), element("span", "", `Relevance ${result.relevance_score}`));
+  const origin = element("span", "", `From ${hostOf(result.origin)}`);
+  origin.title = result.origin;
+  meta.append(origin);
+  if (result.crawler_id) {
+    const onMap = element("a", "", "See it on its map");
+    onMap.href = `/crawler/${encodeURIComponent(result.crawler_id)}?address=${encodeURIComponent(result.url)}`;
+    meta.append(onMap);
+  }
+  item.append(meta);
+  return item;
+}
 
-      try {
-        await performLucky(currentPageSize);
-      } catch (error) {
-        console.error(error);
-        setSearchStatus("Error", "red");
-        showAlert("Lucky request failed.");
-      }
-    });
+function showResults(payload) {
+  const count = plural(payload.total_results, "result");
+  const query = element("strong", "", payload.query);
+  if (luckyWord) {
+    setSummary(`Lucky word `, query, `: ${count}`);
+  } else {
+    setSummary(`${count} for `, query);
   }
 
-  if (assignmentBtn) {
-    assignmentBtn.addEventListener("click", async () => {
-      currentQuery = document.getElementById("search-query").value.trim().toLowerCase();
-      currentPageSize = Number(document.getElementById("search-limit").value);
-      currentPage = 1;
-      currentMode = "assignment";
+  const list = element("ol", "results");
+  list.start = (payload.page - 1) * payload.page_size + 1;
+  list.append(...payload.results.map(buildResult));
+  resultsArea.replaceChildren(list);
 
-      if (!currentQuery) {
-        showAlert("Please enter a query.");
-        return;
-      }
+  pagination.hidden = payload.total_pages <= 1;
+  pageLabel.textContent = `Page ${numberFormat.format(payload.page)} of ${numberFormat.format(payload.total_pages)}`;
+  prevButton.disabled = !payload.has_prev;
+  nextButton.disabled = !payload.has_next;
+}
 
-      try {
-        await performAssignmentSearch(currentQuery, currentPage, currentPageSize);
-      } catch (error) {
-        console.error(error);
-        setSearchStatus("Error", "red");
-        showAlert("Assignment-format request failed.");
-      }
-    });
-  }
-
-  if (prevBtn) {
-    prevBtn.addEventListener("click", async () => {
-      if (currentPage > 1) {
-        currentPage -= 1;
-        try {
-          await rerunCurrentMode();
-        } catch (error) {
-          console.error(error);
-          setSearchStatus("Error", "red");
-          showAlert("Previous page request failed.");
-        }
-      }
-    });
-  }
-
-  if (nextBtn) {
-    nextBtn.addEventListener("click", async () => {
-      currentPage += 1;
-      try {
-        await rerunCurrentMode();
-      } catch (error) {
-        console.error(error);
-        setSearchStatus("Error", "red");
-        showAlert("Next page request failed.");
-      }
-    });
+// ---------- Searching ----------
+async function runSearch() {
+  const request = beginRequest();
+  document.title = state.query ? `${state.query} - Search` : "Search";
+  try {
+    if (state.query) {
+      await searchAndShow(request.signal);
+    } else {
+      await showStart(request.signal);
+    }
+  } catch (error) {
+    if (error.name !== "AbortError") showError(error.message); // aborted means a newer search owns the screen
+  } finally {
+    if (request === currentRequest) endLoading();
   }
 }
 
-initializeSearchPage();
+async function searchAndShow(signal) {
+  const params = new URLSearchParams({
+    query: state.query,
+    sortBy: state.sort,
+    page: String(state.page),
+    page_size: String(state.size),
+  });
+  const payload = await getJson(`/search?${params}`, signal);
+  if (!payload.terms.length) {
+    setSummary();
+    showState({ title: "Nothing to look for", text: "Search for at least one letter or number." });
+  } else if (!payload.total_results) {
+    await showNoResults(signal);
+  } else {
+    if (payload.page !== state.page) {
+      state.page = payload.page; // the page asked for no longer exists, so the server gave the last one
+      window.history.replaceState(null, "", urlForState());
+    }
+    showResults(payload);
+  }
+}
+
+function newSearch() {
+  state.page = 1;
+  luckyWord = null;
+  rememberState();
+  runSearch();
+}
+
+async function goToPage(page) {
+  state.page = page;
+  rememberState();
+  await runSearch();
+  // Start reading the new page from the top, and keep keyboard users in the same place.
+  if (panel.getBoundingClientRect().top < 0) panel.scrollIntoView({ block: "start" });
+  summary.focus({ preventScroll: true });
+}
+
+async function feelingLucky() {
+  const request = beginRequest();
+  try {
+    const lucky = await getJson("/lucky?page_size=1", request.signal);
+    if (!lucky.term) {
+      endLoading();
+      state.query = "";
+      syncForm();
+      rememberState();
+      showNothingIndexed();
+      return;
+    }
+    state.query = lucky.term;
+    state.page = 1;
+    luckyWord = lucky.term;
+    syncForm();
+    rememberState();
+    runSearch();
+  } catch (error) {
+    if (error.name === "AbortError") return;
+    endLoading();
+    showError(error.message);
+  }
+}
+
+// ---------- Controls ----------
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  state.query = queryInput.value.trim();
+  newSearch();
+});
+
+sortSelect.addEventListener("change", () => {
+  state.sort = sortSelect.value;
+  newSearch();
+});
+
+sizeSelect.addEventListener("change", () => {
+  state.size = Number(sizeSelect.value);
+  newSearch();
+});
+
+luckyButton.addEventListener("click", feelingLucky);
+prevButton.addEventListener("click", () => goToPage(state.page - 1));
+nextButton.addEventListener("click", () => goToPage(state.page + 1));
+
+window.addEventListener("popstate", () => {
+  luckyWord = null;
+  readUrl();
+  syncForm();
+  runSearch();
+});
+
+readUrl();
+syncForm();
+if (!state.query) queryInput.focus();
+runSearch();

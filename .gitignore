@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.env
+.pytest_cache/
+.ruff_cache/
+
+# The database is built by crawling
+data/
+
+# Working files from design reviews. PRODUCT.md, DESIGN.md and the rest of .impeccable/ are meant to be committed.
+.impeccable/mocks/
+.impeccable/review/
+.impeccable/questions/
+
+.DS_Store
+.idea/
+.vscode/
+*.log

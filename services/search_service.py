@@ -1,171 +1,58 @@
-# services/search_service.py
+"""Search requests: input limits, pagination and the "feeling lucky" option."""
+from __future__ import annotations
 
-import random
-from search.file_index import file_index
+from typing import Dict, Tuple
+
+import config
+from search.index import search_index
+
+Response = Tuple[Dict, int]
+
+
+def _positive(value, default: int, maximum: int) -> int:
+    try:
+        number = int(value)
+    except (TypeError, ValueError):
+        return default
+    return min(number, maximum) if number > 0 else default
 
 
 class SearchService:
-    def _normalize_positive_int(self, value, default):
-        try:
-            value = int(value)
-        except (ValueError, TypeError):
-            return default
-        return value if value > 0 else default
+    def search(self, query: str, sort_by: str = "relevance", page=1, page_size=10) -> Response:
+        query = (query or "").strip()[: config.MAX_QUERY_CHARS]
+        sort_by = "depth" if (sort_by or "").strip().lower() == "depth" else "relevance"
+        page = _positive(page, 1, 1_000_000)
+        page_size = _positive(page_size, 10, config.MAX_PAGE_SIZE)
 
-    def search(self, query: str, sort_by: str = "relevance", page: int = 1, page_size: int = 10):
-        query = (query or "").strip().lower()
-        sort_by = (sort_by or "relevance").strip().lower()
-        page = self._normalize_positive_int(page, 1)
-        page_size = self._normalize_positive_int(page_size, 10)
-
-        if not query:
-            return {
-                "query": query,
-                "sortBy": sort_by,
-                "count": 0,
-                "results": [],
-                "page": 1,
-                "page_size": page_size,
-                "total_results": 0,
-                "total_pages": 1,
-                "has_prev": False,
-                "has_next": False,
-            }, 200
-
-        ranked = file_index.search_ranked(query)
-
-        if sort_by == "depth":
-            ranked.sort(key=lambda item: (item["depth"], -item["frequency"], item["url"]))
-        else:
-            ranked.sort(
-                key=lambda item: (
-                    -item["relevance_score"],
-                    -item["frequency"],
-                    item["depth"],
-                    item["url"],
-                )
-            )
-
-        total_results = len(ranked)
-        total_pages = max(1, (total_results + page_size - 1) // page_size)
-
+        found = search_index.search(query, sort_by=sort_by, page=page, page_size=page_size)
+        total_pages = max(1, (found["total"] + page_size - 1) // page_size)
         if page > total_pages:
             page = total_pages
-
-        start = (page - 1) * page_size
-        end = start + page_size
-        paged_results = ranked[start:end]
+            found = search_index.search(query, sort_by=sort_by, page=page, page_size=page_size)
 
         return {
             "query": query,
             "sortBy": sort_by,
-            "count": len(paged_results),
-            "results": paged_results,
+            "terms": found["terms"],
+            "count": len(found["results"]),
+            "results": found["results"],
             "page": page,
             "page_size": page_size,
-            "total_results": total_results,
+            "total_results": found["total"],
             "total_pages": total_pages,
             "has_prev": page > 1,
             "has_next": page < total_pages,
         }, 200
 
-    def search_assignment_format(self, query: str, page: int = 1, page_size: int = 10):
-        query = (query or "").strip().lower()
-        page = self._normalize_positive_int(page, 1)
-        page_size = self._normalize_positive_int(page_size, 10)
+    def lucky(self, page_size=10) -> Response:
+        term = search_index.random_term()
+        if term is None:
+            return {"term": None, "message": "Nothing has been indexed yet.", **self.search("", page_size=page_size)[0]}, 200
+        payload, status = self.search(term, page_size=page_size)
+        return {"term": term, **payload}, status
 
-        ranked = file_index.search_ranked(query)
-
-        formatted = [
-            (item["url"], item["origin"], item["depth"])
-            for item in ranked
-        ]
-
-        total_results = len(formatted)
-        total_pages = max(1, (total_results + page_size - 1) // page_size)
-
-        if page > total_pages:
-            page = total_pages
-
-        start = (page - 1) * page_size
-        end = start + page_size
-        paged_results = formatted[start:end]
-
-        return {
-            "query": query,
-            "count": len(paged_results),
-            "results": paged_results,
-            "page": page,
-            "page_size": page_size,
-            "total_results": total_results,
-            "total_pages": total_pages,
-            "has_prev": page > 1,
-            "has_next": page < total_pages,
-        }, 200
-
-    def lucky(self, page_size: int = 10):
-        page_size = self._normalize_positive_int(page_size, 10)
-
-        bucket_files = file_index.list_bucket_files()
-        if not bucket_files:
-            return {
-                "term": None,
-                "count": 0,
-                "results": [],
-                "page": 1,
-                "page_size": page_size,
-                "total_results": 0,
-                "total_pages": 1,
-                "has_prev": False,
-                "has_next": False,
-                "message": "No indexed data available yet."
-            }, 200
-
-        chosen_term = None
-        for bucket_name in bucket_files:
-            path = file_index.base_path / bucket_name
-            try:
-                lines = path.read_text(encoding="utf-8").splitlines()
-            except Exception:
-                lines = []
-
-            words = []
-            for line in lines:
-                parsed = file_index._parse_line(line)
-                if parsed:
-                    words.append(parsed["word"])
-
-            if words:
-                chosen_term = random.choice(words)
-                break
-
-        if not chosen_term:
-            return {
-                "term": None,
-                "count": 0,
-                "results": [],
-                "page": 1,
-                "page_size": page_size,
-                "total_results": 0,
-                "total_pages": 1,
-                "has_prev": False,
-                "has_next": False,
-                "message": "No searchable terms found."
-            }, 200
-
-        ranked = file_index.search_ranked(chosen_term)[:page_size]
-
-        return {
-            "term": chosen_term,
-            "count": len(ranked),
-            "results": ranked,
-            "page": 1,
-            "page_size": page_size,
-            "total_results": len(ranked),
-            "total_pages": 1,
-            "has_prev": False,
-            "has_next": False,
-        }, 200
+    def stats(self) -> Response:
+        return search_index.get_stats(), 200
 
 
 search_service = SearchService()

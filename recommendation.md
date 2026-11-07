@@ -1,5 +1,28 @@
-# Production Recommendations
+# Taking this further
 
-To deploy this system into a high-scale production environment, the first major improvement would be replacing the current file-based storage with a distributed and scalable data store. A NoSQL database or key-value store (such as Redis, DynamoDB, or Cassandra) would significantly improve read/write performance and enable efficient indexing and querying. Additionally, the crawler should be redesigned into a distributed architecture where multiple worker nodes process URLs in parallel using a centralized message queue (e.g., Kafka or RabbitMQ). This would allow horizontal scaling and better handling of large-scale web crawling workloads.
+The app is built for one person on one machine, and for thousands of pages rather than millions. The measurements in the README show what that means in practice. If it had to grow, these are the steps in the order they would matter.
 
-Secondly, the search component should be upgraded to use a proper inverted index structure with advanced ranking algorithms such as TF-IDF or BM25. This would improve relevance and retrieval quality. System reliability can be enhanced by adding fault tolerance, retry mechanisms, and monitoring tools (e.g., logging pipelines, metrics dashboards). Furthermore, implementing rate limiting, robots.txt compliance, and resource constraints (memory, CPU, storage) would ensure ethical and stable crawling behavior. These improvements would transform the system from a prototype into a production-ready search platform.
+## Finding things better
+
+Search quality would improve most, for the least work, from:
+
+- **Stemming.** "köprü" does not find "köprüleri" today, which hurts Turkish especially because of its suffixes. A language-aware stemmer at index and query time would fix it, at the cost of re-indexing.
+- **Phrase search.** Postings store how often a word appears, not where, so "machine learning" can't be searched as an exact phrase. Storing positions makes the index larger.
+- **Link-based ranking.** Crawled links are thrown away after they are queued. Keeping them would allow PageRank or similar as a ranking signal.
+- **An evaluation set.** Ranking is checked by tests for specific behaviours, not against labelled relevance judgements. Any further tuning should be measured with a set of queries and expected results first.
+
+## Crawling more
+
+- **Pages that need JavaScript.** Only the HTML the server sends is read, so sites that build their content in the browser appear nearly empty. A headless browser would fix this and make each page far more expensive.
+- **Recrawling.** A page is only updated when a job is restarted, and a page that no longer exists stays in the index. Storing each page's `ETag` and `Last-Modified` would allow cheap revisits and removal of dead pages.
+- **Parallel fetching.** Each job fetches one page at a time. Several workers per job would help across many sites, since the speed limit is already per site.
+
+## Serving more than one person
+
+- **Authentication.** The app has none, and it stays safe by answering only on this machine. Exposing it needs logins first, and the Host check in `app.py` would need replacing.
+- **A production server.** `python app.py` uses Flask's development server. Waitress or Gunicorn would replace it, but crawl jobs live as threads inside the web process, so they would have to move to their own worker first.
+- **Private addresses.** A crawl can be pointed at anything this machine can reach, including its own network. On a shared server, addresses would have to be checked before each request, including after redirects.
+
+## Storing more
+
+SQLite allows one writer at a time. In the measurements it handled four jobs without losing anything, because each page is a short transaction, but writers do queue. When that becomes the limit, the usual next step is a server database such as PostgreSQL for jobs and the queue, and a dedicated search engine such as OpenSearch for the index, since an inverted index kept in general-purpose tables grows quickly. A message queue and distributed workers only make sense after that, at a scale this project has not been tested at.

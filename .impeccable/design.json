@@ -1,0 +1,535 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-07T09:25:50+00:00",
+  "title": "Design System: Crawler",
+  "extensions": {
+    "colorMeta": {
+      "water": {
+        "role": "primary",
+        "displayName": "Deep Water",
+        "canonical": "#0f4a5c",
+        "tonalRamp": [
+          "#143038",
+          "#1e5667",
+          "#237e99",
+          "#24a8d1",
+          "#52bbdb",
+          "#86cadf",
+          "#bbdde8",
+          "#edf5f7"
+        ]
+      },
+      "water-deep": {
+        "role": "primary",
+        "displayName": "Deeper Water",
+        "canonical": "#0a3744",
+        "tonalRamp": [
+          "#143039",
+          "#1d5768",
+          "#21809b",
+          "#21acd4",
+          "#50bddd",
+          "#85cce0",
+          "#badee8",
+          "#edf5f7"
+        ]
+      },
+      "water-soft": {
+        "role": "primary",
+        "displayName": "Pale Water",
+        "canonical": "#cfe3e8",
+        "tonalRamp": [
+          "#1d2c2f",
+          "#314d54",
+          "#41707b",
+          "#5094a5",
+          "#75abb8",
+          "#9dbfc8",
+          "#c6d8dc",
+          "#f0f4f5"
+        ]
+      },
+      "water-tint": {
+        "role": "primary",
+        "displayName": "Water Tint",
+        "canonical": "#e6f1f2",
+        "tonalRamp": [
+          "#1e2d2e",
+          "#325052",
+          "#447478",
+          "#559aa0",
+          "#78afb4",
+          "#9fc3c6",
+          "#c7d9db",
+          "#f0f4f4"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Survey Ink",
+        "canonical": "#10323c",
+        "tonalRamp": [
+          "#182e35",
+          "#25525f",
+          "#2f788e",
+          "#35a0c0",
+          "#5fb4ce",
+          "#8fc6d6",
+          "#bfdbe3",
+          "#eef4f6"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Faded Ink",
+        "canonical": "#4a666c",
+        "tonalRamp": [
+          "#22292b",
+          "#39484c",
+          "#4f686e",
+          "#648991",
+          "#85a2a8",
+          "#a7babe",
+          "#cbd5d7",
+          "#f1f3f4"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Map White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#262626",
+          "#424242",
+          "#5e5e5e",
+          "#7a7a7a",
+          "#969696",
+          "#b2b2b2",
+          "#d1d1d1",
+          "#f2f2f2"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Woodland Ground",
+        "canonical": "#f1f4ea",
+        "tonalRamp": [
+          "#292e1e",
+          "#495233",
+          "#697845",
+          "#89a055",
+          "#a2b479",
+          "#bac69f",
+          "#d5dbc7",
+          "#f3f4f0"
+        ]
+      },
+      "ground-soft": {
+        "role": "neutral",
+        "displayName": "Pale Woodland Ground",
+        "canonical": "#f7f9f2",
+        "tonalRamp": [
+          "#2a2f1d",
+          "#4a5530",
+          "#6b7d40",
+          "#8da74e",
+          "#a5ba73",
+          "#bcc99c",
+          "#d6ddc6",
+          "#f3f5f0"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#cbd7d0",
+        "tonalRamp": [
+          "#232926",
+          "#3c4941",
+          "#54695d",
+          "#6b8a78",
+          "#8aa394",
+          "#abbab1",
+          "#cdd5d0",
+          "#f1f3f2"
+        ]
+      },
+      "rule-strong": {
+        "role": "neutral",
+        "displayName": "Strong Hairline",
+        "canonical": "#7e9aa0",
+        "tonalRamp": [
+          "#22292a",
+          "#3b474a",
+          "#52666b",
+          "#68868d",
+          "#88a0a5",
+          "#a9b9bc",
+          "#ccd4d6",
+          "#f1f3f3"
+        ]
+      },
+      "contour": {
+        "role": "tertiary",
+        "displayName": "Sienna Contour",
+        "canonical": "#a9673a",
+        "tonalRamp": [
+          "#32241a",
+          "#5b3e2a",
+          "#865736",
+          "#b56f40",
+          "#c58e68",
+          "#d0ad95",
+          "#e0cec2",
+          "#f6f2ef"
+        ]
+      },
+      "contour-text": {
+        "role": "tertiary",
+        "displayName": "Sienna Text",
+        "canonical": "#85501f",
+        "tonalRamp": [
+          "#362617",
+          "#624123",
+          "#915c2b",
+          "#c57730",
+          "#d2945b",
+          "#d9b18c",
+          "#e5d0be",
+          "#f7f2ee"
+        ]
+      },
+      "road": {
+        "role": "tertiary",
+        "displayName": "Road Red",
+        "canonical": "#c8321e",
+        "tonalRamp": [
+          "#391814",
+          "#68261d",
+          "#9b3022",
+          "#d33722",
+          "#dd6150",
+          "#e09085",
+          "#e8bfba",
+          "#f7eeed"
+        ]
+      },
+      "road-text": {
+        "role": "tertiary",
+        "displayName": "Road Red Text",
+        "canonical": "#ad2a18",
+        "tonalRamp": [
+          "#391813",
+          "#68251c",
+          "#9c2f20",
+          "#d53620",
+          "#de604e",
+          "#e18f84",
+          "#e9bfb9",
+          "#f8eeed"
+        ]
+      },
+      "road-tint": {
+        "role": "tertiary",
+        "displayName": "Road Red Tint",
+        "canonical": "#fbeae7",
+        "tonalRamp": [
+          "#381a14",
+          "#66291e",
+          "#993524",
+          "#d03e25",
+          "#da6752",
+          "#de9487",
+          "#e7c1bb",
+          "#f7efed"
+        ]
+      },
+      "wood": {
+        "role": "tertiary",
+        "displayName": "Woodland",
+        "canonical": "#27693f",
+        "tonalRamp": [
+          "#1b3223",
+          "#2b593c",
+          "#398454",
+          "#43b16b",
+          "#6bc28b",
+          "#96cfab",
+          "#c3dfcd",
+          "#eff5f1"
+        ]
+      },
+      "amber": {
+        "role": "tertiary",
+        "displayName": "Amber",
+        "canonical": "#875a10",
+        "tonalRamp": [
+          "#3a2b13",
+          "#6a4c1b",
+          "#9f6e1e",
+          "#d9911c",
+          "#e1a94b",
+          "#e3be82",
+          "#ead7b9",
+          "#f8f4ed"
+        ]
+      },
+      "wait": {
+        "role": "tertiary",
+        "displayName": "Waiting Blue",
+        "canonical": "#6f97a3",
+        "tonalRamp": [
+          "#21292c",
+          "#37484d",
+          "#4c6870",
+          "#608995",
+          "#81a2ab",
+          "#a5bac0",
+          "#cad5d8",
+          "#f1f3f4"
+        ]
+      },
+      "wait-bar": {
+        "role": "tertiary",
+        "displayName": "Waiting Bar",
+        "canonical": "#c4d6da",
+        "tonalRamp": [
+          "#212a2c",
+          "#374a4e",
+          "#4c6a71",
+          "#5f8c96",
+          "#81a4ac",
+          "#a4bbc1",
+          "#cad6d8",
+          "#f1f3f4"
+        ]
+      },
+      "pin": {
+        "role": "secondary",
+        "displayName": "Survey Pin",
+        "canonical": "#f2c14e",
+        "tonalRamp": [
+          "#3c2f11",
+          "#6e5417",
+          "#a57b17",
+          "#e2a413",
+          "#e9b744",
+          "#e7c87e",
+          "#ecdcb6",
+          "#f8f5ec"
+        ]
+      },
+      "highlight": {
+        "role": "neutral",
+        "displayName": "Marker Yellow",
+        "canonical": "#fbe7a1",
+        "tonalRamp": [
+          "#3d330f",
+          "#715c14",
+          "#aa8813",
+          "#e9b80c",
+          "#eec73f",
+          "#ebd27a",
+          "#eee1b4",
+          "#f9f6ec"
+        ]
+      },
+      "visited": {
+        "role": "neutral",
+        "displayName": "Visited Link",
+        "canonical": "#5b4b8a",
+        "tonalRamp": [
+          "#231f2e",
+          "#3b3351",
+          "#524677",
+          "#69579e",
+          "#897ab3",
+          "#aaa0c5",
+          "#cdc8da",
+          "#f1f0f4"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "brand": {
+        "displayName": "Brand",
+        "purpose": "The name in the shell."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "The crawl's host."
+      },
+      "section": {
+        "displayName": "Section",
+        "purpose": "The heading over the address list."
+      },
+      "result-title": {
+        "displayName": "Result title",
+        "purpose": "Search results, clamped to two lines."
+      },
+      "count": {
+        "displayName": "Count",
+        "purpose": "Legend counts, in tabular figures."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text and snippets."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Form labels and record details."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Counts, captions and reasons."
+      },
+      "place-name": {
+        "displayName": "Place name",
+        "purpose": "Names on the map, in italic: the only italics in the system."
+      },
+      "log": {
+        "displayName": "Log",
+        "purpose": "The raw log, because it is a machine record."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "mark-land",
+        "value": "200ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "A new mark fades and scales in. Removed under reduced motion."
+      },
+      {
+        "name": "state-change",
+        "value": "150ms ease-out",
+        "purpose": "Colour changes on hover and press."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "legend-under-map",
+        "value": "1240px"
+      },
+      {
+        "name": "narrow-limits",
+        "value": "1180px"
+      },
+      {
+        "name": "list-over-crawl",
+        "value": "820px"
+      },
+      {
+        "name": "phone",
+        "value": "700px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The main action in an area, such as Start crawl.",
+      "html": "<button class=\"ds-btn-primary\">Start crawl</button>",
+      "css": ".ds-btn-primary { min-height: 40px; padding: 0 16px; border: 1px solid var(--water); border-radius: 4px; background: var(--water); color: #fff; font: 600 15px/1 var(--font); cursor: pointer; transition: background-color .15s ease-out; } .ds-btn-primary:hover { background: var(--water-deep); } .ds-btn-primary:focus-visible { outline: 2px solid var(--water); outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Every other action, Stop included, because red means failure.",
+      "html": "<button class=\"ds-btn-secondary\">Pause</button>",
+      "css": ".ds-btn-secondary { min-height: 40px; padding: 0 16px; border: 1px solid var(--water); border-radius: 4px; background: var(--paper); color: var(--water); font: 600 15px/1 var(--font); cursor: pointer; transition: background-color .15s ease-out; } .ds-btn-secondary:hover { background: var(--water-tint); } .ds-btn-secondary:focus-visible { outline: 2px solid var(--water); outline-offset: 2px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "A labelled field for an address or a limit.",
+      "html": "<label class=\"ds-field\">Starting address<input class=\"ds-input\" placeholder=\"https://example.com\" /></label>",
+      "css": ".ds-field { display: block; color: var(--ink-soft); font: 400 14px var(--font); } .ds-input { display: block; width: 100%; height: 40px; margin-top: 4px; padding: 0 10px; border: 1px solid var(--rule-strong); border-radius: 4px; background: var(--paper); color: var(--ink); font: 400 15px var(--font); } .ds-input:focus-visible { outline: 2px solid var(--water); outline-offset: 2px; }"
+    },
+    {
+      "name": "Shell Navigation",
+      "kind": "nav",
+      "description": "The two pages, on the water-blue bar.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-link\" aria-current=\"page\" href=\"#\">Crawls</a><a class=\"ds-nav-link\" href=\"#\">Search</a></nav>",
+      "css": ".ds-nav { display: flex; gap: 22px; padding: 0 28px; background: var(--water); } .ds-nav-link { display: flex; align-items: center; min-height: 60px; border-top: 3px solid transparent; border-bottom: 3px solid transparent; color: #fff; font: 600 15px var(--font); text-decoration: none; transition: border-color .15s ease-out; } .ds-nav-link:hover { border-bottom-color: var(--water-soft); } .ds-nav-link[aria-current='page'] { border-bottom-color: var(--pin); } .ds-nav-link:focus-visible { outline: 2px solid var(--pin); }"
+    },
+    {
+      "name": "Filter",
+      "kind": "chip",
+      "refersTo": "filter",
+      "description": "Shows addresses of one result, with its count. Shares state with the legend.",
+      "html": "<button class=\"ds-filter\" aria-pressed=\"true\">All <b>198</b></button> <button class=\"ds-filter\" aria-pressed=\"false\">Failed <b>3</b></button>",
+      "css": ".ds-filter { min-height: 34px; padding: 0 10px; border: 1px solid var(--rule-strong); border-radius: 4px; background: var(--paper); color: var(--water); font: 500 14px var(--font); cursor: pointer; } .ds-filter b { font-weight: 600; font-variant-numeric: tabular-nums; } .ds-filter:hover { background: var(--water-tint); } .ds-filter[aria-pressed='true'] { border-color: var(--water); background: var(--water); color: #fff; }"
+    },
+    {
+      "name": "Address Row",
+      "kind": "custom",
+      "description": "One address, with its mark, depth chip and result.",
+      "html": "<button class=\"ds-visit\"><svg width=\"16\" height=\"16\" viewBox=\"-5 -5 10 10\" aria-hidden=\"true\"><path d=\"M-3-3L3 3M3-3L-3 3\" fill=\"none\" stroke=\"var(--road)\" stroke-width=\"1.9\"/></svg><span>/gone</span><span class=\"ds-chip\">depth 1</span><span class=\"ds-why\">Failed: HTTP 404</span></button>",
+      "css": ".ds-visit { display: grid; grid-template-columns: 18px 1fr 72px 40%; align-items: center; gap: 8px; width: 100%; padding: 6px; border: 0; border-top: 1px solid var(--rule); background: none; color: var(--ink); font: 400 14px var(--font); text-align: left; cursor: pointer; } .ds-visit:hover { background: var(--ground-soft); } .ds-chip { justify-self: start; padding: 0 6px; border-radius: 2px; background: var(--depth-1); font-size: 13px; } .ds-why { color: var(--road-text); font-size: 13px; }"
+    },
+    {
+      "name": "Legend Row",
+      "kind": "custom",
+      "description": "A mark, a label and a count, with reasons beneath.",
+      "html": "<button class=\"ds-legend\"><svg width=\"16\" height=\"16\" viewBox=\"-5 -5 10 10\" aria-hidden=\"true\"><circle r=\"2.8\" fill=\"#fff\" stroke=\"var(--contour)\" stroke-width=\"1.4\"/></svg><span>Skipped</span><span class=\"ds-count\">6</span></button>",
+      "css": ".ds-legend { display: grid; grid-template-columns: 18px 1fr auto; align-items: center; gap: 8px; width: 100%; padding: 8px 6px; border: 0; border-top: 1px solid var(--rule); background: none; color: var(--ink); font: 400 15px var(--font); text-align: left; cursor: pointer; } .ds-legend:hover { background: var(--ground-soft); } .ds-count { font-size: 19px; font-weight: 700; font-variant-numeric: tabular-nums; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Survey Sheet",
+    "overview": "A crawl is a survey of a site, so the app reads like a good national map: exact, legible at a glance, and with a key that accounts for every symbol. The map is the one expressive object. Everything around it is standard web controls set in ruled rows, because a person checking a crawl should know where everything is before they notice the style.\n\nThe system exists to make one claim believable: nothing goes missing unseen. Skipped and failed addresses are drawn as plainly as indexed ones, and each has a reason. It deliberately avoids the look of an ordinary SaaS dashboard, which the owner named as the one thing that would feel wrong.",
+    "keyCharacteristics": [
+      "One map, drawn only from real records, as the focal element.",
+      "One drawing of each mark, shared by the map, the legend and the list.",
+      "Ruled rows at one hairline weight instead of padded cards.",
+      "Colour that means something: state on the marks, depth on the tints.",
+      "No metric cards."
+    ],
+    "rules": [
+      {
+        "name": "The Red Means Failure Rule",
+        "body": "Road red marks something that failed. A Stop button is an ordinary button.",
+        "section": "colors"
+      },
+      {
+        "name": "The Key Rule",
+        "body": "A colour on a mark or a depth means the same thing on all three pages, so what someone learns on the map still holds in the list and in search.",
+        "section": "colors"
+      },
+      {
+        "name": "The Lined-Up Numbers Rule",
+        "body": "Every number that can change uses tabular figures.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Italic Rule",
+        "body": "Italics are for place names on the map, as on a real map. Emphasis elsewhere comes from weight.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Sheet Rule",
+        "body": "Nothing casts a shadow. A printed map has no shadows, and these surfaces don't need them.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do draw every mark from a real record, and label anything left unlabelled honestly, as the map's caption does.",
+      "Do show failed and skipped addresses as plainly as indexed ones, each with its reason.",
+      "Do use the shared mark drawings and the depth tints whenever a mark or a depth appears.",
+      "Do keep controls standard: real buttons, inputs, selects and links.",
+      "Do put text from crawled pages on the page only as text, never as HTML.",
+      "Do serve everything from the app, with no other hosts at runtime."
+    ],
+    "donts": [
+      "Don't use metric cards or a row of big numbers above a table. It reads as an ordinary SaaS dashboard, the one look the owner ruled out.",
+      "Don't use road red for anything but failure.",
+      "Don't add shadows or a second line weight.",
+      "Don't move a mark once it is placed.",
+      "Don't add marks to the map for decoration."
+    ]
+  }
+}

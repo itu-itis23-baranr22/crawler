@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Crawler{% endblock %}</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Cpath d='M11 3l9 16H2z' fill='%230F4A5C'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="shell">
+    <a class="brand" href="/">
+      <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M11 3l9 16H2z" fill="currentColor" /></svg>
+      Crawler
+    </a>
+    <nav aria-label="Main">
+      <a href="/" {% if active == "crawls" %}aria-current="page"{% endif %}>Crawls</a>
+      <a href="/search-page" {% if active == "search" %}aria-current="page"{% endif %}>Search</a>
+    </nav>
+    <p class="index-totals" id="index-totals"></p>
+  </header>
+
+  <!-- One drawing of each map mark, used by the map, the legend and the activity list. -->
+  <svg class="mark-sprite" aria-hidden="true">
+    <defs>
+      <g id="mark-indexed"><circle r="2.8" class="mk-indexed" /></g>
+      <g id="mark-skipped"><circle r="2.8" class="mk-skipped" /></g>
+      <g id="mark-failed"><path d="M-3-3L3 3M3-3L-3 3" class="mk-failed" /></g>
+      <g id="mark-redirected"><path d="M0-3.4L3 2H-3z" class="mk-redirected" /></g>
+      <g id="mark-waiting"><circle r="1.5" class="mk-waiting" /></g>
+    </defs>
+  </svg>
+
+  {% block content %}{% endblock %}
+
+  <script src="{{ url_for('static', filename='common.js') }}"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

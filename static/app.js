@@ -1,280 +1,178 @@
-function escapeHtml(text) {
-  const div = document.createElement("div");
-  div.textContent = text ?? "";
-  return div.innerHTML;
-}
+"use strict";
 
-function showAlert(message) {
-  alert(message);
-}
+// The dashboard: start a crawl, see them all, and watch the selected one.
 
-function getStatusBadgeClass(status) {
-  const normalized = (status || "").toLowerCase();
+const LIST_REFRESH_MS = 2500;
 
-  if (["running", "completed", "ready"].includes(normalized)) return "green";
-  if (["paused", "created"].includes(normalized)) return "yellow";
-  if (["stopped", "failed", "error"].includes(normalized)) return "red";
-  return "blue";
-}
+const crawlerForm = document.getElementById("crawler-form");
+const formError = document.getElementById("form-error");
+const crawlerList = document.getElementById("crawler-list");
+const crawlDetail = document.getElementById("crawl-detail");
+const limitsToggle = document.getElementById("limits-toggle");
 
-function formatTimestamp(ts) {
-  if (!ts) return "-";
+let crawlers = [];
+let selectedId = new URLSearchParams(window.location.search).get("crawl");
+let openedId = null;
 
-  if (typeof ts === "number") {
-    return new Date(ts * 1000).toLocaleString();
+const crawlView = new CrawlView(crawlDetail, {
+  showFullStatus: true,
+  onStatus: (status) => {
+    const index = crawlers.findIndex((crawler) => crawler.crawler_id === status.crawler_id);
+    if (index === -1) return;
+    crawlers[index] = status;
+    renderList();
+  },
+  onGone: () => {
+    selectedId = null;
+    openedId = null;
+    refreshList();
+  },
+});
+
+function barSegments(crawler) {
+  const parts = [
+    ["indexed", crawler.pages_crawled],
+    ["skipped", crawler.skipped_pages],
+    ["failed", crawler.failed_pages],
+    ["redirected", crawler.redirected_pages],
+    ["waiting", crawler.queue_size],
+  ];
+  const total = parts.reduce((sum, [, count]) => sum + count, 0);
+  const bar = element("div", "bar");
+  bar.setAttribute("aria-hidden", "true");
+  if (total) {
+    for (const [name, count] of parts) {
+      if (!count) continue;
+      const segment = element("i", `b-${name}`);
+      segment.style.width = `${(count / total) * 100}%`;
+      bar.append(segment);
+    }
   }
-
-  const parsed = new Date(ts);
-  if (!Number.isNaN(parsed.getTime())) {
-    return parsed.toLocaleString();
-  }
-
-  return String(ts);
+  return bar;
 }
 
-function summarizeStatuses(crawlers) {
-  let running = 0;
-  let paused = 0;
-  let finished = 0;
-
-  let totalIndexedDocuments = 0;
-  let totalUniqueTerms = 0;
-  let totalPostings = 0;
-  let totalBucketFiles = 0;
-
-  for (const crawler of crawlers) {
-    const status = (crawler.status || "").toLowerCase();
-
-    if (status === "running") running += 1;
-    else if (status === "paused") paused += 1;
-    else if (["completed", "stopped"].includes(status)) finished += 1;
-
-    totalIndexedDocuments = Math.max(
-      totalIndexedDocuments,
-      Number(crawler.indexed_documents || 0)
-    );
-    totalUniqueTerms = Math.max(
-      totalUniqueTerms,
-      Number(crawler.unique_terms || 0)
-    );
-    totalPostings = Math.max(
-      totalPostings,
-      Number(crawler.total_postings || 0)
-    );
-    totalBucketFiles = Math.max(
-      totalBucketFiles,
-      Number(crawler.bucket_files || 0)
-    );
-  }
-
-  return {
-    total: crawlers.length,
-    running,
-    paused,
-    finished,
-    totalIndexedDocuments,
-    totalUniqueTerms,
-    totalPostings,
-    totalBucketFiles,
-  };
+function buildRow(crawler) {
+  const item = element("li");
+  const row = element("button", "job");
+  row.type = "button";
+  row.dataset.id = crawler.crawler_id;
+  row.setAttribute("aria-current", String(crawler.crawler_id === selectedId));
+  const top = element("div", "job-top");
+  top.append(element("span", "job-host", hostOf(crawler.origin)), element("span", `job-status status-${crawler.status}`, crawler.status));
+  const counts = [
+    `${numberFormat.format(crawler.pages_crawled)} indexed`,
+    `${numberFormat.format(crawler.skipped_pages)} skipped`,
+    `${numberFormat.format(crawler.failed_pages)} failed`,
+    `${numberFormat.format(crawler.redirected_pages)} redirected`,
+    `${numberFormat.format(crawler.queue_size)} waiting`,
+  ].join(" · ");
+  row.append(top, barSegments(crawler), element("div", "job-counts", counts));
+  row.addEventListener("click", () => selectCrawler(crawler.crawler_id, { reveal: true }));
+  item.append(row);
+  return item;
 }
 
-function goToCrawlerStatus(crawlerId) {
-  window.location.href = `/crawler/${encodeURIComponent(crawlerId)}`;
-}
-
-function buildCrawlerCard(crawler) {
-  const status = crawler.status || "unknown";
-  const badgeClass = getStatusBadgeClass(status);
-
-  return `
-    <div class="activity-card" style="margin-bottom: 16px;">
-      <div class="row" style="align-items: flex-start;">
-        <div style="flex: 1;">
-          <h3 style="margin-bottom: 8px;">${escapeHtml(crawler.crawler_id || "unknown crawler")}</h3>
-          <div class="url-text" style="margin-bottom: 8px;">${escapeHtml(crawler.origin || "")}</div>
-
-          <div class="tag-row">
-            <span class="tag">Status: ${escapeHtml(status)}</span>
-            <span class="tag">Depth: ${escapeHtml(String(crawler.max_depth ?? "-"))}</span>
-            <span class="tag">Max Pages: ${escapeHtml(String(crawler.max_pages ?? "-"))}</span>
-            <span class="tag">Pages Crawled: ${escapeHtml(String(crawler.pages_crawled ?? 0))}</span>
-            <span class="tag">Visited: ${escapeHtml(String(crawler.visited_count ?? 0))}</span>
-            <span class="tag">Failed: ${escapeHtml(String(crawler.failed_pages ?? 0))}</span>
-            <span class="tag">Queue Size: ${escapeHtml(String(crawler.queue_size ?? 0))}</span>
-            <span class="tag">Hit Rate: ${escapeHtml(String(crawler.hit_rate ?? "-"))}</span>
-          </div>
-
-          <div class="tag-row" style="margin-top: 10px;">
-            <span class="tag">Indexed Docs: ${escapeHtml(String(crawler.indexed_documents ?? 0))}</span>
-            <span class="tag">Unique Terms: ${escapeHtml(String(crawler.unique_terms ?? 0))}</span>
-            <span class="tag">Postings: ${escapeHtml(String(crawler.total_postings ?? 0))}</span>
-            <span class="tag">Buckets: ${escapeHtml(String(crawler.bucket_files ?? 0))}</span>
-          </div>
-
-          <div class="muted-small" style="margin-top: 10px;">
-            Created: ${escapeHtml(formatTimestamp(crawler.created_at))}
-          </div>
-          <div class="muted-small" style="margin-top: 4px;">
-            Updated: ${escapeHtml(formatTimestamp(crawler.updated_at_iso || crawler.updated_at))}
-          </div>
-        </div>
-
-        <span class="badge ${badgeClass}">${escapeHtml(status)}</span>
-      </div>
-
-      <div class="button-row" style="margin-top: 16px;">
-        <button type="button" class="btn-primary" onclick="goToCrawlerStatus('${escapeHtml(crawler.crawler_id || "")}')">View Status</button>
-        <button type="button" class="btn-secondary" onclick="pauseCrawler('${escapeHtml(crawler.crawler_id || "")}')">Pause</button>
-        <button type="button" class="btn-secondary" onclick="resumeCrawler('${escapeHtml(crawler.crawler_id || "")}')">Resume</button>
-        <button type="button" class="btn-danger" onclick="stopCrawler('${escapeHtml(crawler.crawler_id || "")}')">Stop</button>
-        <button type="button" class="btn-secondary" onclick="restartCrawler('${escapeHtml(crawler.crawler_id || "")}')">Restart</button>
-        <button type="button" class="btn-primary" onclick="loadLogs('${escapeHtml(crawler.crawler_id || "")}')">View Logs</button>
-      </div>
-    </div>
-  `;
-}
-
-async function createCrawler(payload) {
-  const response = await fetch("/api/crawlers", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(payload),
-  });
-
-  return await response.json();
-}
-
-async function fetchCrawlers() {
-  const response = await fetch("/api/crawlers");
-  return await response.json();
-}
-
-async function postCrawlerAction(crawlerId, action) {
-  const response = await fetch(`/api/crawlers/${encodeURIComponent(crawlerId)}/${action}`, {
-    method: "POST",
-  });
-
-  return await response.json();
-}
-
-async function fetchLogs(crawlerId) {
-  const response = await fetch(`/api/crawlers/${encodeURIComponent(crawlerId)}/logs?last_n=100`);
-  return await response.json();
-}
-
-async function refreshCrawlerList() {
-  const data = await fetchCrawlers();
-  const crawlers = data.crawlers || [];
-
-  const listEl = document.getElementById("crawler-list");
-  const countLabel = document.getElementById("crawler-count-label");
-
-  countLabel.textContent = `${crawlers.length} crawlers`;
-
-  if (crawlers.length === 0) {
-    listEl.innerHTML = `<div class="result-card">No crawlers created yet.</div>`;
-  } else {
-    listEl.innerHTML = crawlers.map(buildCrawlerCard).join("");
-  }
-
-  const summary = summarizeStatuses(crawlers);
-
-  document.getElementById("total-crawlers").textContent = summary.total;
-  document.getElementById("running-crawlers").textContent = summary.running;
-  document.getElementById("paused-crawlers").textContent = summary.paused;
-  document.getElementById("finished-crawlers").textContent = summary.finished;
-
-  document.getElementById("loaded-jobs").textContent = summary.total;
-  document.getElementById("running-jobs").textContent = summary.running;
-  document.getElementById("paused-jobs").textContent = summary.paused;
-  document.getElementById("finished-jobs").textContent = summary.finished;
-
-  document.getElementById("total-indexed-documents").textContent = summary.totalIndexedDocuments;
-  document.getElementById("total-unique-terms").textContent = summary.totalUniqueTerms;
-  document.getElementById("total-postings").textContent = summary.totalPostings;
-  document.getElementById("total-bucket-files").textContent = summary.totalBucketFiles;
-
-  const systemHealth = document.getElementById("system-health");
-  if (summary.running > 0) {
-    systemHealth.textContent = "Running";
-    systemHealth.className = "badge green";
-  } else if (summary.paused > 0) {
-    systemHealth.textContent = "Paused";
-    systemHealth.className = "badge yellow";
-  } else {
-    systemHealth.textContent = "Ready";
-    systemHealth.className = "badge green";
-  }
-}
-
-async function loadLogs(crawlerId) {
-  const data = await fetchLogs(crawlerId);
-  const logs = data.logs || [];
-
-  document.getElementById("selected-log-label").textContent = crawlerId;
-
-  const logViewer = document.getElementById("log-viewer");
-  if (logs.length === 0) {
-    logViewer.textContent = "No logs found.";
+function renderList() {
+  const focusedId = document.activeElement && document.activeElement.classList.contains("job") ? document.activeElement.dataset.id : null;
+  if (!crawlers.length) {
+    crawlerList.replaceChildren(element("li", "no-crawls", "No crawls yet."));
     return;
   }
-
-  logViewer.textContent = logs.join("\n");
-}
-
-async function pauseCrawler(crawlerId) {
-  const data = await postCrawlerAction(crawlerId, "pause");
-  showAlert(data.message || "Pause request sent.");
-  await refreshCrawlerList();
-}
-
-async function resumeCrawler(crawlerId) {
-  const data = await postCrawlerAction(crawlerId, "resume");
-  showAlert(data.message || "Resume request sent.");
-  await refreshCrawlerList();
-}
-
-async function stopCrawler(crawlerId) {
-  const data = await postCrawlerAction(crawlerId, "stop");
-  showAlert(data.message || "Stop request sent.");
-  await refreshCrawlerList();
-}
-
-async function restartCrawler(crawlerId) {
-  const data = await postCrawlerAction(crawlerId, "restart");
-  showAlert(data.message || "Restart request sent.");
-  await refreshCrawlerList();
-}
-
-async function initializeDashboard() {
-  const form = document.getElementById("crawler-form");
-  const refreshBtn = document.getElementById("refresh-btn");
-
-  if (form) {
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-
-      const payload = {
-        origin: document.getElementById("origin").value,
-        max_depth: Number(document.getElementById("max_depth").value),
-        max_pages: Number(document.getElementById("max_pages").value),
-        hit_rate: Number(document.getElementById("hit_rate").value),
-        queue_limit: Number(document.getElementById("queue_limit").value),
-      };
-
-      const data = await createCrawler(payload);
-      showAlert(data.message || "Crawler created.");
-      await refreshCrawlerList();
-    });
+  crawlerList.replaceChildren(...crawlers.map(buildRow));
+  if (focusedId) {
+    const again = crawlerList.querySelector(`[data-id="${CSS.escape(focusedId)}"]`);
+    if (again) again.focus({ preventScroll: true });
   }
-
-  if (refreshBtn) {
-    refreshBtn.addEventListener("click", refreshCrawlerList);
-  }
-
-  await refreshCrawlerList();
-  setInterval(refreshCrawlerList, 5000);
 }
 
-initializeDashboard();
+function showFirstRun() {
+  crawlView.close();
+  if (crawlDetail.querySelector(".first-run")) return;
+  const box = element("div", "first-run");
+  const words = element("div");
+  words.append(
+    element("h2", "", "Start your first crawl"),
+    element("p", "", "Enter a starting address above and press Start crawl. Each address the crawler reaches appears here on a map, with the reason it was indexed, skipped or failed."),
+    element("p", "", "Pages can be searched as soon as they are indexed. If the app closes during a crawl, finished pages are safe and the crawl can be resumed."),
+    element("p", "", "On sites you don't own, keep the page limit and the speed low.")
+  );
+  const map = new CrawlMap();
+  map.configure({ seed: "first run", origin: "", maxDepth: 2 });
+  map.node.setAttribute("aria-label", "An empty crawl map");
+  box.append(words, map.node);
+  crawlDetail.replaceChildren(box);
+}
+
+function selectCrawler(id, { reveal = false } = {}) {
+  selectedId = id;
+  const url = new URL(window.location.href);
+  url.searchParams.set("crawl", id);
+  window.history.replaceState(null, "", url);
+  renderList();
+  if (id !== openedId) {
+    openedId = id;
+    crawlView.open(id);
+  }
+  // Where the list sits above the crawl, picking one should bring it into view.
+  if (reveal && window.matchMedia("(max-width: 820px)").matches) crawlDetail.scrollIntoView({ block: "start" });
+}
+
+async function refreshList() {
+  let data;
+  try {
+    data = await getJson("/api/crawlers");
+  } catch {
+    return; // the selected crawl's view already reports lost contact
+  }
+  crawlers = data.crawlers.reverse(); // newest first
+  if (!crawlers.length) {
+    renderList();
+    showFirstRun();
+    return;
+  }
+  if (!crawlers.some((crawler) => crawler.crawler_id === selectedId)) {
+    const running = crawlers.find((crawler) => crawler.status === "running");
+    selectCrawler((running || crawlers[0]).crawler_id);
+    return;
+  }
+  renderList();
+  if (selectedId !== openedId) selectCrawler(selectedId);
+}
+
+crawlerForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  formError.hidden = true;
+  const submit = crawlerForm.querySelector("button[type=submit]");
+  submit.disabled = true;
+  const result = await postJson("/api/crawlers", {
+    origin: crawlerForm.origin.value,
+    max_depth: crawlerForm.max_depth.value,
+    max_pages: crawlerForm.max_pages.value,
+    hit_rate: crawlerForm.hit_rate.value,
+    queue_limit: crawlerForm.queue_limit.value,
+  });
+  submit.disabled = false;
+  if (!result.ok) {
+    formError.textContent = result.data.message || "The crawl could not be started.";
+    formError.hidden = false;
+    setLimitsOpen(true); // the problem may be one of them, and on a phone they start hidden
+    crawlerForm.origin.focus();
+    return;
+  }
+  crawlerForm.origin.value = "";
+  crawlers.unshift(result.data.crawler);
+  selectCrawler(result.data.crawler.crawler_id, { reveal: true });
+});
+
+function setLimitsOpen(isOpen) {
+  limitsToggle.setAttribute("aria-expanded", String(isOpen));
+  document.getElementById("limits").classList.toggle("is-open", isOpen);
+}
+
+limitsToggle.addEventListener("click", () => setLimitsOpen(limitsToggle.getAttribute("aria-expanded") !== "true"));
+
+refreshList();
+setInterval(() => {
+  refreshList();
+  refreshTotals();
+}, LIST_REFRESH_MS);

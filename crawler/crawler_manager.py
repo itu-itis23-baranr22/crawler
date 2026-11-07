@@ -1,30 +1,33 @@
-# crawler/crawler_manager.py
+"""Creates crawl jobs, and finds them again after the app restarts."""
+from __future__ import annotations
 
-import time
+import secrets
 import threading
-from typing import Optional
+import time
+from datetime import datetime, timezone
+from typing import Dict, List, Optional
 
+import config
 from crawler.crawler_job import CrawlerJob
+from crawler.url_tools import site_of
+from search.index import search_index
 from storage.crawler_store import crawler_store
 
 
 class CrawlerManager:
     def __init__(self):
-        self.crawlers = {}
+        self.jobs: Dict[str, CrawlerJob] = {}
+        self.lock = threading.Lock()
 
-    # ---------- ID ----------
-    def _generate_crawler_id(self) -> str:
-        """
-        Spec-like format:
-        [EpochTimeCreated_ThreadID]
-        Example:
-            1711043201_140553824603008
-        """
-        epoch_created = int(time.time())
-        thread_id = threading.get_ident()
-        return f"{epoch_created}_{thread_id}"
+    def recover(self) -> int:
+        """Call once at startup. Jobs left running lost their threads; report them honestly."""
+        return crawler_store.mark_interrupted()
 
-    # ---------- Create ----------
+    def forget_jobs(self) -> None:
+        """Drop live job objects, as a process restart would. Used by tests."""
+        with self.lock:
+            self.jobs.clear()
+
     def create_crawler(
         self,
         origin: str,
@@ -33,104 +36,84 @@ class CrawlerManager:
         hit_rate: float = 1.0,
         queue_limit: int = 1000,
     ) -> CrawlerJob:
-        crawler_id = self._generate_crawler_id()
-
-        # collision guard
-        while crawler_id in self.crawlers or crawler_store.load_metadata(crawler_id):
-            time.sleep(0.001)
-            crawler_id = self._generate_crawler_id()
-
-        job = CrawlerJob(
+        crawler_id = f"{int(time.time())}_{secrets.token_hex(4)}"
+        crawler_store.create(
             crawler_id=crawler_id,
             origin=origin,
+            status="created",
             max_depth=max_depth,
             max_pages=max_pages,
             hit_rate=hit_rate,
             queue_limit=queue_limit,
+            scope={site_of(origin)},
         )
-
-        self.crawlers[crawler_id] = job
+        job = self.get_job(crawler_id)
         job.start()
         return job
 
-    # ---------- Get ----------
-    def get_crawler(self, crawler_id: str) -> Optional[CrawlerJob]:
-        if crawler_id in self.crawlers:
-            return self.crawlers[crawler_id]
-
-        metadata = crawler_store.load_metadata(crawler_id)
-        if metadata:
-            job = CrawlerJob(
-                crawler_id=metadata.get("crawler_id", crawler_id),
-                origin=metadata.get("origin", ""),
-                max_depth=metadata.get("max_depth", 2),
-                max_pages=metadata.get("max_pages", 100),
-                hit_rate=metadata.get("hit_rate", 1.0),
-                queue_limit=metadata.get("queue_limit", 1000),
-            )
-
-            job.status = metadata.get("status", "created")
-            job.pages_crawled = metadata.get("pages_crawled", 0)
-            job.failed_pages = metadata.get("failed_pages", 0)
-            job.created_at = metadata.get("created_at", time.time())
-            job.updated_at = metadata.get("updated_at", time.time())
-
-            visited_urls = crawler_store.load_visited(crawler_id)
-            job.visited = set(visited_urls)
-
-            queue_items = crawler_store.load_queue(crawler_id)
-            for item in queue_items:
-                url = item.get("url")
-                origin = item.get("origin", metadata.get("origin", ""))
-                depth = item.get("depth", 0)
-                if url:
-                    job.frontier.enqueue(url, origin, depth)
-
-            self.crawlers[crawler_id] = job
+    def get_job(self, crawler_id: str) -> Optional[CrawlerJob]:
+        with self.lock:
+            job = self.jobs.get(crawler_id)
+            if job:
+                return job
+            if not crawler_store.get(crawler_id):
+                return None
+            job = CrawlerJob(crawler_id)
+            self.jobs[crawler_id] = job
             return job
 
-        return None
+    # ---------- Status ----------
+    def _describe(self, record: Dict) -> Dict:
+        status = dict(record)
+        status.pop("scope", None)
+        status["queue_size"] = crawler_store.queue_size(record["crawler_id"])
+        status["visited_count"] = crawler_store.seen_count(record["crawler_id"])
+        status["updated_at_iso"] = datetime.fromtimestamp(record["updated_at"], tz=timezone.utc).isoformat()
+        status.update(search_index.get_stats())
+        return status
 
-    # ---------- List ----------
-    def list_crawlers(self) -> list:
-        return crawler_store.list_crawlers()
+    def get_status(self, crawler_id: str) -> Optional[Dict]:
+        record = crawler_store.get(crawler_id)
+        return self._describe(record) if record else None
+
+    def get_version(self, crawler_id: str) -> Optional[int]:
+        record = crawler_store.get(crawler_id)
+        return record["status_version"] if record else None
+
+    def list_crawlers(self) -> List[Dict]:
+        return [self._describe(record) for record in crawler_store.list_all()]
+
+    def get_logs(self, crawler_id: str, last_n: int = 200) -> Optional[List[str]]:
+        return crawler_store.logs(crawler_id, last_n) if crawler_store.get(crawler_id) else None
+
+    def get_visits(self, crawler_id: str, after: int = 0) -> Optional[Dict]:
+        if not crawler_store.get(crawler_id):
+            return None
+        reasons = crawler_store.visit_reasons(crawler_id)
+        return {
+            "crawler_id": crawler_id,
+            "visits": crawler_store.visits(crawler_id, after, config.MAX_VISITS_SHOWN),
+            "waiting": crawler_store.waiting(crawler_id, config.MAX_WAITING_SHOWN),
+            "reasons": reasons,
+            "total": sum(entry["count"] for entry in reasons),
+        }
 
     # ---------- Controls ----------
-    def pause_crawler(self, crawler_id: str) -> bool:
-        job = self.get_crawler(crawler_id)
-        if not job:
-            return False
-        return job.pause()
+    def _control(self, crawler_id: str, action: str) -> bool:
+        job = self.get_job(crawler_id)
+        return bool(job and getattr(job, action)())
 
-    def resume_crawler(self, crawler_id: str) -> bool:
-        job = self.get_crawler(crawler_id)
-        if not job:
-            return False
-        return job.resume()
+    def pause(self, crawler_id: str) -> bool:
+        return self._control(crawler_id, "pause")
 
-    def stop_crawler(self, crawler_id: str) -> bool:
-        job = self.get_crawler(crawler_id)
-        if not job:
-            return False
-        return job.stop()
+    def resume(self, crawler_id: str) -> bool:
+        return self._control(crawler_id, "resume")
 
-    def restart_crawler(self, crawler_id: str) -> bool:
-        job = self.get_crawler(crawler_id)
-        if not job:
-            return False
-        return job.restart()
+    def stop(self, crawler_id: str) -> bool:
+        return self._control(crawler_id, "stop")
 
-    # ---------- Logs / Status ----------
-    def get_crawler_status(self, crawler_id: str) -> Optional[dict]:
-        job = self.get_crawler(crawler_id)
-        if job:
-            return job.get_status()
-
-        metadata = crawler_store.load_metadata(crawler_id)
-        return metadata if metadata else None
-
-    def get_crawler_logs(self, crawler_id: str, last_n: int = 200) -> list:
-        return crawler_store.load_logs(crawler_id, last_n=last_n)
+    def restart(self, crawler_id: str) -> bool:
+        return self._control(crawler_id, "restart")
 
 
 crawler_manager = CrawlerManager()
